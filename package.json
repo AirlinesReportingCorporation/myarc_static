@@ -1,0 +1,29 @@
+{
+  "name": "myarc_static",
+  "version": "1.0.0",
+  "description": "Static Files for MyARC Update",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "node_modules/.bin/babel",
+    "start": "concurrently \"node-sass src/css/main.scss -wo dest/css/style.css --output-style compressed\"  \"babel src/js/main.js --watch --out-file dest/js/main.js \" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AirlinesReportingCorporation/myarc_static.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AirlinesReportingCorporation/myarc_static/issues"
+  },
+  "homepage": "https://github.com/AirlinesReportingCorporation/myarc_static#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "concurrently": "^3.5.1",
+    "node-sass": "^4.7.2"
+  }
+}
