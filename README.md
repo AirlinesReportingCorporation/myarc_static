@@ -3,10 +3,10 @@ Static Files for MyARC Update
 
 This repository uses [https://npmjs.org/package/node-sass](node-sass), providing a CSS precomiler to better modularity.  Similarly, javascript is precomiled using [https://babeljs.io/](babel) to provide support for ES6 syntax and for its use of `import` for javascript modularity.
 
-##Install
+## Install
 Clone the git repository and make sure to install the mode modules:
 
-````shell  
+```shell  
 git clone https://github.com/AirlinesReportingCorporation/myarc_static.git
 
 cd minified-scripts
