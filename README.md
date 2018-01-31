@@ -1,4 +1,4 @@
-# MyARC CSS/JS Workflow
+# My ARC CSS/JS Workflow
 
 This repository uses [https://npmjs.org/package/node-sass](node-sass), providing a CSS precomiler to better modularity.  Similarly, javascript is precomiled using [https://babeljs.io/](babel) to provide support for ES6 syntax and for its use of `import` for javascript modularity.
 
@@ -28,15 +28,15 @@ myarc_static/
 |
 |-- src/
 |   |-- css / 
-|      |-- style.css
-|      |-- partials / 
-|         |-- _base.scss
-|            |-- _colors.scss
-|            |-- _fonts.scss
+|       |-- style.css
+|       |-- partials / 
+|           |-- _base.scss
+|              |-- _colors.scss
+|              |-- _fonts.scss
 |   |-- js / 
-|      |-- main.js
-|      |-- partials / 
-|         |-- _TC-common.scss
+|       |-- main.js
+|       |-- partials / 
+|           |-- _TC-common.scss
 |
 |-- dest/
 |   |-- css / 
@@ -47,5 +47,7 @@ myarc_static/
 |-- webpack.config.js
 |
 |-- package.json
+|-- README.md
+|-- .gitignore
 
 ```
