@@ -28,15 +28,15 @@ myarc_static/
 |
 |-- src/
 |   |-- css / 
-|				|-- style.css
-|				|-- partials / 
-|       		|-- _base.scss
-|       		|-- _colors.scss
-|       		|-- _fonts.scss
+|      |-- style.css
+|      |-- partials / 
+|         |-- _base.scss
+|            |-- _colors.scss
+|            |-- _fonts.scss
 |   |-- js / 
-|				|-- main.js
-|				|-- partials / 
-|       		|-- _TC-common.scss
+|      |-- main.js
+|      |-- partials / 
+|         |-- _TC-common.scss
 |
 |-- dest/
 |   |-- css / 
