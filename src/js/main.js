@@ -2,7 +2,11 @@
 $(".wlp-bighorn-book").after("<div class='loginPortlet'></div>");
 
 // get query for login
+<<<<<<< HEAD
 $.getJSON( "https://arcintgepi.arccorp.com/myarccomp/updated/data.json", function( data ) {
+=======
+$.getJSON( "https://arcintgepi.arccorp.com/sandbox/myarcportlet/data.json?923847", function( data ) {
+>>>>>>> c1831206f2ade074b4804906b729af9294b76312
 	
 	//code to sanitize JSON input to prevent injection
 	/* 
@@ -49,6 +53,10 @@ $.getJSON( "https://arcintgepi.arccorp.com/myarccomp/updated/data.json", functio
 });
 
 // html DOM edits
+<<<<<<< HEAD
 $("#nav2").html($("#nav2").html().replace("|", "").replace("|", ""));
 
 $("#arcLogo").after("<div class='productName'><h2>My ARC</h2></div>");
+=======
+$("#nav2").html($("#nav2").html().replace("|", "").replace("|", ""));
+>>>>>>> c1831206f2ade074b4804906b729af9294b76312
