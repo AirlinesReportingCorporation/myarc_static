@@ -25,14 +25,21 @@ This command runs `concurrently \"node-sass src/css/main.scss -wo dest/css/style
 ## Folder Structure
 ```
 myarc_static/
+|-- login.html
+|-- dashboard.html
+|-- account_edit.html
+|-- data.json
 |
 |-- src/
 |   |-- css / 
 |       |-- style.css
 |       |-- partials / 
 |           |-- _base.scss
+|              |-- _base.scss
 |              |-- _colors.scss
 |              |-- _fonts.scss
+|              |-- _headerfooter.scss
+|              |-- _login.scss
 |   |-- js / 
 |       |-- main.js
 |       |-- partials / 
