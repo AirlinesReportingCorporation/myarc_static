@@ -1,0 +1,1586 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>My ARC</title><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skeletons/myarc/css/layout.css"><script src="https://myarc.arccorp.com/PortalApp/framework/skeletons/myarc/js/buttons.js" type="text/javascript"></script><script src="https://myarc.arccorp.com/PortalApp/framework/skeletons/myarc/js/util.js" type="text/javascript"></script><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/css/colors.css"><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/css/general.css"><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/css/menu.css"><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/css/window.css"><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/css/wsrp.css"><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/css/custom.css"><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/borderless/css/window.css"></head>
+
+
+<link rel="stylesheet" type="text/css" href="test.css">
+
+<body><div class="wlp-bighorn-header">
+
+
+
+
+
+
+
+
+
+
+
+<link href="https://myarc.arccorp.com/PortalApp/css/arccorpIE7.css" rel="stylesheet"/>
+
+
+
+	<title>Arilines Reporting Corporation - MyARC</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+	<meta http-equiv="Content-Language" content="en-us" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<link rel="shortcut icon" href="https://myarc.arccorp.com/PortalApp/img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/arccorp.css" />
+	<link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/myarcportal.css" />
+	<link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/jquery.tabs.css" media="print, projection, screen" />
+	<!--[if IE 6]>
+		<link rel="stylesheet" media="all" type="text/css" href="css/arccorpIE6.css" />
+	<![endif]-->
+	<!--[if IE 7]>
+		<link rel="stylesheet" media="all" type="text/css" href="css/arccorpIE7.css" />
+	<![endif]-->
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/default.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.blockUI.js"></script>  
+	<!-- <script type="text/javascript" src="js/jquery.pack.js"></script>-->
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.tabs.pack.js"></script>
+	<script type="text/javascript">
+
+	if(jQuery('#tabsWrapper').length != 0)
+	{
+		jQuery(document).ready(function(){
+					jQuery("#tabsWrapper").tabs();
+		 });
+	}
+		function changeBgImage (image, id) {
+			var element = document.getElementById(id);
+			element.style.backgroundImage = "url("+image+")";
+		}
+		
+		
+		function setCookie(c_name,value,expireminutes)
+		{
+		    var exdate=new Date();
+		    exdate.setMinutes(exdate.getMinutes()+expireminutes);
+		    document.cookie=c_name+ "=" +escape(value)+
+		    ((expireminutes==null) ? "" : "; expires="+exdate);
+		}
+
+		function getToolCookie(c_name)
+		{
+		    if (document.cookie.length>0)
+		    { 
+		        c_start=document.cookie.indexOf(c_name + "=");
+		        if (c_start!=-1)
+		        { 
+		            c_start=c_start + c_name.length+1; 
+		            c_end=document.cookie.indexOf(";",c_start);
+		            if (c_end==-1) c_end=document.cookie.length;
+		            return unescape(document.cookie.substring(c_start,c_end));
+		        } 
+		    }
+		    return "";
+		}
+		    
+		 //Close window
+		 
+		 function closeDep() {			
+		 if(getToolCookie('toolPaging')!="")
+		 {
+		    setCookie('toolPaging',"",-1);
+		 }
+		 if(getToolCookie('resPaging')!="")
+		 {
+		    setCookie('resPaging',"",-1);
+		 }
+		/* if(winHelp!=null)
+		  {
+		    winHelp.close();
+		  }
+		  if (winHelp && winHelp.open && !winHelp.closed)
+		  {
+		     
+		     winHelp.close();
+		  }
+
+		  if(winArc!=null)
+		  {
+		    winArc.close();
+		  }
+		  if (winArc && winArc.open && !winArc.closed)
+		  {
+		     
+		     winArc.close();
+		  }
+		  
+
+		  if(winResources!=null)
+		  {
+		    winResources.close();
+		  }
+		  if (winResources && winResources.open && !winResources.closed)
+		  {
+		     
+		     winResources.close();
+		  }
+		  
+		   if(winContent!=null)
+		  {
+		    winContent.close();
+		  }
+		  if (winContent && winContent.open && !winContent.closed)
+		  {
+		     
+		     winContent.close();
+		  }*/
+		  
+		} 
+function disableLink()
+{
+
+	getElement("enableLink").style.display = 'none';
+	getElement("disableLink").style.display = 'inline';
+   
+}
+
+var timeout	= 500;
+var closetimer	= 0;
+var ddmenuitem	= 0;
+
+function mopen(id)
+{	
+	
+	mcancelclosetime();
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+
+}
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+
+document.onclick = mclose;
+
+
+	</script>
+	
+<style type="text/css">
+	#alertTopBorder {
+		border-top:1px solid #cccccc;
+		display: block;
+		width: 665px;
+	}
+
+#myarc_menu{margin: 0; padding: 0; z-index: 9999}
+#myarc_menu li{	margin: 0; padding: 0; list-style: none;float: left;font: normal 12px arial}
+#myarc_menu li a{display: block;margin: 0 1px 0 0;padding: 4px 10px;width: 160px;background: #fff;color: ##005e9e;text-align: left;text-decoration: none}
+#myarc_menu li a:hover{	background: #fff;text-decoration:underline}
+#myarc_menu div{position: absolute;visibility: hidden;margin: 0;padding: 0;background: #fff;border:#999 1px solid;}
+#myarc_menu div a{position: relative;display: block;margin: 0;padding: 5px 10px;width: auto;white-space: nowrap;text-align: left;text-decoration: none;background: #fff;color: ##005e9e;font: 12px arial}
+#myarc_menu div a:hover{background: #fff;color: ##005e9e}
+</style>
+
+<!--[if lt IE 7.]>
+<script defer type="text/javascript" src="js/pngfix.js"></script>
+<![endif]-->
+<div id="tableTop"><img src="https://myarc.arccorp.com/PortalApp/img/tableTop.png" width="938" height="10" alt="" /></div>
+<div id="pageFrameHdr" style="min-height:85px;">
+	<div id="pageBody" style="height:85px;">
+		<div id="arcLogo"><a href="https://www2.arccorp.com/"><img src="https://myarc.arccorp.com/PortalApp/img/arcLogo.jpg" alt="arc" style="margin-top:30px;" /></a></div>
+		<div id="searchNav">
+			<div id="search">
+				<form action="http://www.arccorp.com/search.jsp" id="cse-search-box" name="frmSearch">
+					<input type="hidden" name="cx" value="015607577759290326119:htqf1xunjds" />
+					<input type="hidden" name="cof" value="FORID:11" />
+					<input type="hidden" name="ie" value="UTF-8" />
+					<div id="nav2">
+						<div style="float:right; margin:0px 0px 0px 5px; padding:0px 0px 0px 0px;"><a href="https://www2.arccorp.com/about-us/contact-us/">Contact Us</a></div>
+						<div style="float:right; margin:0px 0px 0px 5px; padding:0px 0px 0px 0px;"><a href="https://www.arccorp.com/webhelp/myarc/" target="_blank">Help</a> |</div>
+
+						
+						
+						<div id="logBtn" class="btnLogout" style="float:right;">
+						
+						<a href="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_pageLabel=ARC_Login&amp;_name=logout&amp;_nfls=false" onclick="closeDep();document.getElementById('logBtn').innerHTML='Log Out |';">Log Out</a> |</div>
+						<div id="myarc_menu" style="float:right; margin:0px 5px 0px 0px; padding:0px 0px 0px 0px;">
+						
+	                    <a href="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_pageLabel=ARC_EditAccount&amp;fromHeader=toEditAcBegin&amp;_nfls=false" onmouseover="mopen('m1')" onmouseout="mclosetime()">Account Settings</a>
+	                    
+					        <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" style="border:1; z-index:99999999;">
+						        <a href="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_pageLabel=ARC_EditAccount&amp;fromHeader=toEditAcBegin&amp;_nfls=false&defaultexpanded=0">User Information</a>
+						        <a href="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_pageLabel=ARC_EditAccount&amp;fromHeader=toEditAcBegin&amp;_nfls=false&defaultexpanded=1">Password</a>
+						        <a href="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_pageLabel=ARC_EditAccount&amp;fromHeader=toEditAcBegin&amp;_nfls=false&defaultexpanded=2">Security Questions</a>
+						        <a href="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_pageLabel=ARC_EditAccount&amp;fromHeader=toEditAcBegin&amp;_nfls=false&defaultexpanded=3">Email Options</a>
+						        <a href="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_pageLabel=ARC_EditAccount&amp;fromHeader=toEditAcBegin&amp;_nfls=false&defaultexpanded=4">Company Information</a>
+					        </div>
+				         |
+						</div>
+						<div style="float:right; margin:0px 5px 0px 0px; padding:0px 0px 0px 0px;">Welcome, ifajardo |</div>
+						
+							
+					</div>
+					<div id="searchSubmit" style="clear:both;"><a href="#" onclick="document.frmSearch.submit();" name="sa">GO</a></div>
+					<div id="searchInput"><input type="text" name="q" size="31" /></div>
+				</form>
+			</div>
+			<div id="topNav"><script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/milonic_src.js"></script><script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/mmenudom.js"></script>
+				
+					<script type="text/javascript" src="https://www.arccorp.com/js/milonic_src.js"></script><script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/mmenudom.js"></script><script type="text/javascript" src="https://www.arccorp.com/js/menu_data_cart.js"></script><script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/mm_menueditapi.js"></script>
+				
+				
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+
+
+
+
+
+</div><div id="ARCGateway_Book" class="wlp-bighorn-book"><div class="wlp-bighorn-book-content"><div id="ARC_Home" class="wlp-bighorn-page"><table width="100%" cellpadding="0" class="wlp-bighorn-layout" cellspacing="0"><tr><td style="padding:0 0 0 3px;" rowspan="2" valign="top" width="26%"><div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="LeftPane_1" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+
+	
+	
+	<title>Arilines Reporting Corporation - MyARC</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+	<meta http-equiv="Content-Language" content="en-us" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/arccorp.css" />
+	<link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/myarcportal.css" />
+	<link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/jquery.tabs.css" media="print, projection, screen" />
+	<link rel="stylesheet" href="https://myarc.arccorp.com/PortalApp/css/thickbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/default.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.blockUI.js"></script>
+	<!--   <script type="text/javascript" src="js/jquery.pack.js"></script>-->
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.min.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/ddaccordion.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/myarc.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/thickbox.js"></script>
+	<script language="JavaScript" src="https://myarc.arccorp.com/PortalApp/js/NewToolRequest.js "></script>
+	<script type="text/javascript">
+		jQuery.noConflict();
+		ddaccordion.init({
+			headerclass: "expandable", //Shared CSS class name of headers group that are expandable
+			contentclass: "categoryitems", //Shared CSS class name of contents group
+			revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+			mouseoverdelay: 0, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+			collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+			defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+			onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+			animatedefault: false, //Should contents open by default be animated into view?
+			persiststate: true, //persist state of opened contents within browser session?
+			toggleclass: ["", "openheadermyARC"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+			togglehtml: ["prefix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively	["position", "html1", "html2"] (see docs)
+			animatespeed: "slow", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+			oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+				//do nothing
+			},
+			onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+				//do nothing
+			}
+		})
+	</script>
+	<script>   
+    window.onload = function() {   
+     	var tempValue = 'null'; 
+      	
+		if (tempValue == "toolconfirmation" &&  tempValue !=null)
+		{  			
+			getElement("leftCol").style.display = "";
+			getElement("altDiv").style.display = "";
+			getElement("altPop").style.display = "none";
+			getElement("altPop1").style.display = "";
+			getElement("subcanbut").style.display = "none";
+			getElement("closebut").style.display = "";	
+			tb_show('','','');					
+	    }  
+    } 
+  </script>  
+	<script type="text/javascript">
+	var offsetx = 10;
+	var offsety = 0;
+	var ie5 = (document.getElementById && document.all); 
+	var ns6 = (document.getElementById && !document.all); 
+	var ua = navigator.userAgent.toLowerCase();
+	var isapple = (ua.indexOf('applewebkit') != -1 ? 1 : 0);
+	
+
+	function openresource(str) {
+	    var winResource = null;
+	    var popUpsBlocked = true;
+	    winResource = window.open(str);
+	    if(winResource)
+	        popUpsBlocked = false
+	    else
+	        popUpsBlocked = true
+	    
+	    if(popUpsBlocked) {
+	        showPopUpR('dialogR');
+	    }
+	     
+	    if(winResource != null) {
+	        if (window.focus) {winResource.focus()} 
+	    }
+	}
+
+	function newelement(newid)
+	{ 
+	    if(document.createElement)
+	    { 
+	        var el = document.createElement('div'); 
+	        el.id = newid;     
+	        with(el.style)
+	        { 
+	            display = 'none';
+	            position = 'absolute';
+	        } 
+	        el.innerHTML = '&nbsp;'; 
+	        document.body.appendChild(el); 
+	    } 
+	} 
+	
+	function getmouseposition(e)
+	{
+	    if(document.getElementById)
+	    {
+	        var iebody=(document.compatMode && 
+	        	document.compatMode != 'BackCompat') ? 
+	        		document.documentElement : document.body;
+	        pagex = (isapple == 1 ? 0:(ie5)?iebody.scrollLeft:window.pageXOffset);
+	        pagey = (isapple == 1 ? 0:(ie5)?iebody.scrollTop:window.pageYOffset);
+	        mousex = (ie5)?event.x:(ns6)?clientX = e.clientX:false;
+	        mousey = (ie5)?event.y:(ns6)?clientY = e.clientY:false;
+
+	        var lixlpixel_tooltip = document.getElementById('infoBox');
+	        lixlpixel_tooltip.style.top = (mousey+pagey+offsety) + 'px';
+	        lixlpixel_tooltip.style.left = (mousex+pagex+offsetx) + 'px';
+	    }
+	}
+	
+	function showInfo()
+	{
+	    if(!document.getElementById('infoBox')) newelement('infoBox');
+	    var lixlpixel_tooltip = document.getElementById('infoBox');
+	    lixlpixel_tooltip.innerHTML = "Additional Login Required";
+	    lixlpixel_tooltip.style.display = 'block';
+	    lixlpixel_tooltip.style.color = '#000000';
+	    lixlpixel_tooltip.style.size = '98px';
+	    document.onmousemove = getmouseposition;
+	}
+	function showNoInfo()
+	{
+	    document.getElementById('infoBox').style.display = 'none';
+	}
+	function adjHeight() {
+		setTimeout("dspChart()",500);
+		 
+	}
+	</script>
+	<script type="text/javascript">
+		
+		  	function getElement(psID) {
+			if (document.all) {
+				return document.all[psID];
+			} else if (document.getElementById) {
+				return document.getElementById(psID);
+			} else {
+				for (iLayer = 1; iLayer < document.layers.length; iLayer++) {
+					if (document.layers[iLayer].id == psID)
+					return document.layers[iLayer];
+				}
+			}
+			return null;
+		}
+		
+		
+		
+		function closeMsg() {
+		getElement("altDiv").style.display = "none";
+		 return false;
+		}
+		
+	
+	
+	function hiderest() {
+		
+			getElement("leftCol").style.display = "";
+			getElement("altDiv").style.display = "";
+			//RequestPopPosition("altDiv");
+			tb_show('','','');
+
+	}
+	
+	function hidediv() {
+	                
+	       
+			getElement("leftCol").style.display = "";
+			getElement("altDiv").style.display = "none";
+			getElement("altPop").style.display = "";
+			getElement("altPop1").style.display = "none";
+			getElement("subcanbut").style.display = "";
+			getElement("closebut").style.display = "none";
+			
+			self.tb_remove();
+			returnToHome();
+
+	}
+
+	var winTools = null;
+	function openIAR() {
+		var winName = "popupIAR";
+		var1 = "https://iar2.arccorp.com/IAR/";
+		params  = 'width=' + (screen.availWidth-10);
+		params += ', height=' + (screen.availHeight-142);
+		params += ', top=0, left=0, toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes';
+		winTools= window.open(var1, winName, params);
+		if(winTools != null) {
+		    if (window.focus) {winTools.focus();} 
+		}
+	}
+	</script>
+	
+	<style type="text/css">
+	#infoBox {
+		width:					170px;
+		height:					20px;
+		border:					1px solid black;
+		background-color:		#FFFFFF;
+		position:				absolute;
+		display:				none;
+		padding:				0px;
+		margin:					0px;
+	}
+		.AccordionTitle, .AccordionContent, .AccordionContainer
+		{
+			position:relative;
+			width:222px;
+		}
+		
+		.AccordionTitle
+		{
+			overflow:hidden;
+			cursor:pointer;
+			color: #333333;
+			cursor: pointer;
+			font-weight:bold;
+			height: 14px;
+			margin: 2px 0px 2px 0px;
+			padding: 5px 0px 4px 22px;
+			position: relative;
+			width: 205px;
+			background: #f5fbff url(https://myarc.arccorp.com/PortalApp/img/myARCsbContentOff.jpg) top no-repeat;
+		}
+		.openheadermyARC {
+			background-image: url(https://myarc.arccorp.com/PortalApp/img/myARCsbContentOn.jpg);
+		}
+		.AccordionContent
+		{
+			height:auto;
+			display:none; 
+		}
+		
+		.AccordionContainer
+		{
+			background-color: #f5fbff;
+			width:227px;
+		}
+	.AccordionContainer1 {			position:relative;
+			width:222px;
+}
+.AccordionContent1 {			position:relative;
+			width:222px;
+}
+
+	input[type="button"].b102x24gray {
+	background: #fff url(img/b102x24gray.png) no-repeat;
+	width: 102px;
+	height: 24px;
+	}
+	input[type="button"].b102x24gray:hover {
+		background: #fff url(img/b102x24grayOver.png) no-repeat;
+		width: 102px;
+		height: 24px;
+	}
+
+	.popupframe {
+	left: 0%;
+	top:  0%;
+  }
+	
+	.popupbody2 {
+		padding: 25px 25px 25px 10px;
+		width:461px;
+	}
+	.popuphead {
+		color: #333333;
+		padding-left:7px;
+	}
+	
+	</style>
+
+
+<form action="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_windowLabel=LeftPane_1&amp;LeftPane_1_actionOverride=%2Fportlets%2FLeftPane%2Fbegin" method="post">
+<div class="wlp-bighorn-window-content" style="width: 237px;">
+
+	<div id="leftCol" style="margin: 0px;padding: 0px;">
+		<div id="leftNav">
+			<div id="myARCleftNavTop">
+				<div style="padding:0px 0px 0px 5px;">
+					<div style="clear:both;"><h2 class="yourAcct">Your Account</h2> <span style="float:left; padding-left:5px;">
+					
+                    
+                    </span></div>
+                    <div class="txtyrAcct"><span style="color: #ffd200;">Account Settings :</span>
+                    
+                    <a style="color:#FFF; text-decoration:underline; margin:0px 0px 0px 5px; padding:0px 0px 0px 0px;" href="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_pageLabel=ARC_EditAccount&amp;fromHeader=toEditAcBegin&amp;_nfls=false"> Edit</a></div>
+					<div class="txtyrAcct"><span style="color: #ffd200;">Last Login:</span> 08 Jan 10:34 AM ET</div>
+					
+					
+					<div class="txtyrAcct">
+						Your administrator:
+						<br />
+						<a style="color:#FFF; text-decoration:underline;" href="mailto:ccchelp@arccorp.com">ccchelp@arccorp.com</a>
+					</div>
+					
+				</div>
+				
+				
+				<div id="AccordionContainer" class="AccordionContainer">
+					<div class="AccordionTitle expandable" onclick="javascript:adjHeight();return false;"> Your Tools 
+					 </div>
+					<div id="Accordion1Content" class="categoryitems">
+						<div class="accordSec">
+						
+						
+                            	<div class="txtleftSection">
+                            		<img src="https://myarc.arccorp.com/PortalApp/img/dotNoLock.gif"/>
+                            		<a href="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_windowLabel=LeftPane_1&amp;LeftPane_1_actionOverride=%2Fportlets%2FLeftPane%2FopenMyArcTools&amp;LeftPane_1selectedTool=CB"><span style="color: #005e9e;outline: none;text-decoration: none;">
+	                                	Carrier Bulletins (ASP)
+	                                </span></a>
+	                            </div>
+                        
+                        	<div class="txtleftSection">
+                        		<img src="https://myarc.arccorp.com/PortalApp/img/my_arc_lock.gif"/>
+                        		<a href="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_windowLabel=LeftPane_1&amp;LeftPane_1_actionOverride=%2Fportlets%2FLeftPane%2FopenMyArcTools&amp;LeftPane_1selectedTool=DRSAdm"><span style="color: #005e9e;outline: none;text-decoration: none;" title="Additional Login Required">
+	                            	DRS Administration
+	                            </span></a>
+	                        </div>
+                        	
+                        	<div class="txtleftSection">
+                        		<img src="https://myarc.arccorp.com/PortalApp/img/my_arc_lock.gif"/>
+                        		<a href="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_windowLabel=LeftPane_1&amp;LeftPane_1_actionOverride=%2Fportlets%2FLeftPane%2FopenMyArcTools&amp;LeftPane_1selectedTool=DRS"><span style="color: #005e9e;outline: none;text-decoration: none;" title="Additional Login Required">
+	                            	Document Retrieval Service
+	                            </span></a>
+	                        </div>
+                        	
+                        	<div class="txtleftSection">
+                        		<img src="https://myarc.arccorp.com/PortalApp/img/my_arc_lock.gif"/>
+                        		<a href="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_windowLabel=LeftPane_1&amp;LeftPane_1_actionOverride=%2Fportlets%2FLeftPane%2FopenMyArcTools&amp;LeftPane_1selectedTool=TRS"><span style="color: #005e9e;outline: none;text-decoration: none;" title="Additional Login Required">
+	                            	Ticket Resolution Service
+	                            </span></a>
+	                        </div>
+                        	
+                        
+						</div>
+					</div>
+					<div class="AccordionTitle expandable" onclick="javascript:adjHeight();return false;">Resources</div>
+					<div id="Accordion2Content" class="categoryitems">
+						<div class="accordSec">
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a target="_blank" href="https://www2.arccorp.com/support-training/holiday-schedule/" style="padding:0;">2018 Holiday Schedule</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a target="_blank" href="https://www2.arccorp.com/support-training/carriers/processing-schedule/" style="padding:0;">2018 Processing Schedule</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="https://www2.arccorp.com/globalassets/forms/redesignation235.pdf" style="padding:0;" target="_blank">ARC Administrator Re-designation for Carriers</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+	<a href="http://www.arccorp.com/private-myarc/2014ArcCoreSettlementSurcharge.pdf" style="padding:0;" target="_blank">ARC Core Settlement System Surcharge</a>
+</div>
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="http://www.arcmarketplace.com/" style="padding:0;" target="_blank">ARC Marketplace</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="https://vimeo.com/83855674/e48f0958a4" target="_blank" style="padding:0;">ARC's Agency Affirmation Process </a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="https://arccentral.arccorp.com/HR/HROD/Benefitscentral/Pages/default.aspx" style="padding:0;">Benefits Central</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="http://www.arccorp.com/private-myarc/csa/csaLand.jsp" style="padding:0;">Carrier Services Agreement (CSA)</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="https://www2.arccorp.com/globalassets/forms/carrier-ticketing-authority-center-reference-guide-v1.1.pdf" style="padding:0;">CTAC Reference Guide</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="https://www.arccorp.com/private-myarc/cprofile/AccountManagement.pdf" style="padding:0;">Carrier Account Manager</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="https://www.arccorp.com/support/carrier-ancillary-matrix.jsp" style="padding:0;">Carrier Ancillary Matrix</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="http://www.arccorp.com/private-myarc/carriertraining/index.jsp" style="padding:0;">Carrier Education</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="http://arcnet.arc.com/PhoneApp/ " style="padding:0;" target="_blank">Employee Phone Directory</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="https://timecardsso.arccorp.com/" style="padding:0;">Employee Time Card</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="https://www7.ultirecruit.com/AIR1004/JobBoard/ListJobs.aspx?__VT=ExtCan" style="padding:0;" target="_blank">Employment Opportunities</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="https://arccentral.arccorp.com/HR/HROD/Pages/ARCForms.aspx" style="padding:0;">Forms</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="http://www.arccorp.com/iah/" target="_blank" style="padding:0;">Industry Agent's Handbook (IAH)</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="http://arcnet/webhelp/myarc_internal_admin/index.htm" style="padding:0;" target="_blank">Internal Administrator Help</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="https://www.arccorp.com/private-myarc/mfc/" style="padding:0;">Manual for Carriers</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="http://arcmeetingrooms/mrm8/" style="padding:0;" target="_blank">Meeting Room Manager</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="https://www2.arccorp.com/globalassets/forms/memostatusdefinitions.pdf" target="_blank" style="padding:0;">Memo Status Definitions</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="http://www.arccorp.com/support/participating-carriers.jsp" style="padding:0;">Participating Carriers</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="https://arccentral.arccorp.com/HR/HROD/Pages/ARCPolicies.aspx" style="padding:0;">Policies &amp; Procedures</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+				
+	               		<div style="margin-left:13px;">
+    <a href="http://arcnet.arc.com/projectNumberRequest " style="padding:0;" target="_blank">Project Number Request Form</a>
+</div>
+
+				
+				                               
+                                               
+                               </div>
+							
+							
+							<div class="txtleftSection">
+							
+                               <div style="padding-bottom:3px">
+				
+				<div style="margin-left:13px;">
+    <a href="http://www.arccorp.com/support/travel-agent-communications.jsp" style="padding:0;">TAC Message Archive</a>
+</div>
+
+				
+				                               
+                                                              </div>
+                               
+                               </div>
+							
+							
+							
+						</div>
+					</div>
+					
+					
+				</div>
+ 			</div>
+			<div id="leftNavBot"></div>
+		</div>
+	</div>
+	</div>
+</form>	
+<form name="Form" id="Form" action="https://myarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_windowLabel=LeftPane_1&amp;LeftPane_1_actionOverride=%2Fportlets%2FLeftPane%2FsaveNewToolRequest" method="post">
+<div style=" margin-left:37%; margin-top:12.5%; display:none;background-color: #ccc;" class="popupframe" id="altDiv">
+		<div class="popupframeTL"></div>
+		<div class="popupframeTM"><div class="popuphead" style="color: #333333;">Request Access</div></div>
+		<div class="popupframeTR" onclick='hidediv();'></div>
+		<div class="popupbody1">
+			<div class="popupbody2">
+				<div id="altPop" style="height:204px; overflow:auto;">
+					<p>Select the product that you would like to request access.</p>				
+                                 
+	                     
+                                 
+                            
+                                       
+                                           <p>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+// lookup by tagId to "real id"
+function lookupIdByTagId(id, tag)
+{
+   var idScope = lookupIdScope(tag,".");
+   return (idScope == "") ? id : idScope + id;
+}
+
+//Non-Legacy lookup method creating a fully qualified scope id
+function lookupIdScope(tag,sep)
+{
+   var val = "";
+   if (sep == null) sep = "";
+   while (tag != null && tag.getAttribute != null) {
+      try {
+         var attrVal = tag.getAttribute("netui:idScope");
+      } catch (e) { /* ignore, in IE6 calling on a table results in an exception */ }
+      if (attrVal != null)
+         val = attrVal + sep + val;
+      tag = tag.parentNode;
+   }
+   return val;
+}
+
+
+// map tagId to "real name"
+if (netui_tagIdNameMap == null)
+   var netui_tagIdNameMap = new Object();
+netui_tagIdNameMap.checkBox="LeftPane_1wlw-radio_button_group_key:{actionForm.toolsRequested}"
+// lookup by tagId to "real name"
+function lookupNameByTagId(id, tag)
+{
+   var idScope = lookupIdScope(tag,"_");
+   if (idScope == "")
+      return netui_tagIdNameMap[id];
+   else
+      return netui_tagIdNameMap[idScope  + "__" + id];
+}
+
+-->
+</script>
+<input type="radio" name="LeftPane_1wlw-radio_button_group_key:{actionForm.toolsRequested}" id="checkBox" value="CTAC"><span>CTAC
+                                           </p></span>
+                                       
+                               
+                                       
+                                           <p>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+netui_tagIdNameMap.checkBox="LeftPane_1wlw-radio_button_group_key:{actionForm.toolsRequested}"
+-->
+</script>
+<input type="radio" name="LeftPane_1wlw-radio_button_group_key:{actionForm.toolsRequested}" id="checkBox" value="CTACAdmin"><span>CTAC Admin
+                                           </p></span>
+                                       
+                               
+                                       
+                                           <p>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+netui_tagIdNameMap.checkBox="LeftPane_1wlw-radio_button_group_key:{actionForm.toolsRequested}"
+-->
+</script>
+<input type="radio" name="LeftPane_1wlw-radio_button_group_key:{actionForm.toolsRequested}" id="checkBox" value="FST"><span>FareSight
+                                           </p></span>
+                                       
+                               
+                                       
+                                           <p>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+netui_tagIdNameMap.checkBox="LeftPane_1wlw-radio_button_group_key:{actionForm.toolsRequested}"
+-->
+</script>
+<input type="radio" name="LeftPane_1wlw-radio_button_group_key:{actionForm.toolsRequested}" id="checkBox" value="LEOP"><span>LEO Portal
+                                           </p></span>
+                                       
+                               
+                              
+				</div>
+				
+				
+				<div id="altPop1" style="display:none; height:204px;">
+					<p>Your<tool name> request has been submitted to your administrator.</p>
+				</div>
+				
+			</div>
+		</div>
+		
+
+		
+                                <input type="hidden" id="usrCustOrg" name="usrCustOrg" value="" />
+         
+         
+                                <input type="hidden" id="usrFromCarrGrp" name="usrFromCarrGrp" value="" />
+         
+		<div style="clear:both; padding:7px 0px 5px 0px; margin:0px; text-align:center;">
+		<div id="subcanbut">		 
+		
+			<input value="Submit" type="button" tabindex="5" name="frmSub" id="frmSub" onclick="enableNextButton();return false;" class="b102x24gray" />
+		
+		
+		<span style="padding:0px 0px 0px 10px;"></span>
+		<input value="Cancel" type="button" tabindex="6" name="frmCan" id="frmCan" onclick="hidediv();" class="b102x24gray" />
+		</div>
+		
+		<div id="closebut" style="display:none;">
+		<input value="Close" type="button" tabindex="7" name="frmCls" id="frmCls" onclick="hidediv();" class="b102x24gray" />
+		</div>
+		</div>
+		
+		<div style="clear:both;">
+			<div class="popupframeBL"></div>
+			<div class="popupframeBM"></div>
+			<div class="popupframeBR"></div>
+		</div>
+	</div>
+	
+
+ 	
+</form>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+netui_tagIdNameMap.Form="Form"
+-->
+</script>
+
+</div></div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="Promos_2" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+
+
+
+        
+    <div style="margin-top: 10px;">
+    		    	  	
+				<div style="margin-bottom:10px;">
+					
+					<script type="text/javascript" src="https://www.arccorp.com/js/jquery-1_7_1_min.js"></script>
+<script type="text/javascript" src="https://www.arccorp.com/js/jquery_cycle_all.js"></script>
+<style type="text/css">
+	a, img, a img { border: none; outline: none; text-decoration: none; }
+	#adImages {
+		margin: 10px 0px 0px 0px;
+	}
+	#adImages, #adImages img {
+		height: 240px;
+		padding: 0px 0px 0px 0px;
+		width: 237px;
+		-webkit-border-radius:8px;
+		-moz-border-radius:8px;
+		border-radius: 8px;
+	}
+	#adMarkers {
+		height: 9px;
+		margin: 0px auto 0px auto;
+		padding: 14px 0px 0px 0px;
+		text-align: center;
+	}
+	#adMarkers li { float: left; height: 9px; list-style: none; margin: 0px 3px 0px 3px; padding: 0px 0px 0px 0px; width: 9px; }
+	#adMarkers a { background: url(https://www.arccorp.com/img/markerOff.png) no-repeat; display: block; padding: 0px 0px 0px 0px; width: 9px; }
+	#adMarkers li.activeSlide a { background: url(https://www.arccorp.com/img/markerOn.png) no-repeat; }
+	#adMarkers a:focus { outline: none; }
+	#adMarkers img { border: none; display: block; margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; }
+</style>
+<div id="adImages">
+		   	    <a target="_blank" href="https://www2.arccorp.com/products-participation/products/arc-custom-reports/"><img src="https://www.arccorp.com/private-myarc/ads/img/myarc_customreports_1.jpg" width="237" height="240" alt="The world's most comprehensive air ticketing data, customized just for you." title="The world's most comprehensive air ticketing data, customized just for you." /></a>
+    <a target="_blank" href="http://www.arcmarketplace.com/index.jsp"><img src="https://www.arccorp.com/private-myarc/ads/img/myarc_marketplace_2.jpg" width="237" height="240" alt="Easy, valuable commission for you. Once-in-a-lifetime experiences for your clients." title="Easy, valuable commission for you. Once-in-a-lifetime experiences for your clients." /></a>
+
+
+
+</div>
+<script type="text/javascript">
+	<!--
+		$('#adImages').cycle('destroy');
+		$('#adImages').after('<ul id="adMarkers">').cycle({fx:'fade',pause:1,slideResize:0,pager:'#adMarkers',
+			pagerAnchorBuilder: function(idx, slide) {
+				return '<li><a href="#"><img src="https://www.arccorp.com/img/spacer.png" style="width:9px;height:9px;" /></a></li>';
+			}
+		});
+		var adsWdth = 0;
+		adsWdth = document.getElementById("adMarkers").children.length * 15;
+		document.getElementById("adMarkers").style.width = adsWdth + "px";
+		document.getElementById("adMarkers").style.marginLeft = ((237 - adsWdth)/2) + "px";
+	//-->
+</script>
+
+					
+					
+				</div>
+		
+    </div>
+    
+
+    <div style="margin-bottom:10px;">
+		
+		
+		
+		
+	</div></div></div></div></td><td style="padding:0px;"><table><tr><td style="padding:0 0 0 2px;" colspan="2" width="74%"><div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="Alerts_1" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+	#alertTopBorder {
+		border-top:1px solid #cccccc;		
+		width: 665px;
+		display: block;
+		padding: 0px;
+		margin: 0px;
+	}
+       #alertTop1 {
+              width: 665px; 
+              height: 7px;
+              background: url(https://myarc.arccorp.com/PortalApp/img/myarc-login-bgErrorTop.jpg) no-repeat; 
+              padding: 0px; 
+              margin: 0px;   
+       }
+       #alertBody1 {
+              width: 600px;
+              min-height: 33px; 
+              background: url(https://myarc.arccorp.com/PortalApp/img/myarc-login-bgErrorMid.jpg) no-repeat; 
+              padding: 0 10px 0 55px; 
+              margin: 0px;
+              overflow: visible;  
+       }
+       #alertBot1 {
+              width: 665px; 
+              height: 7px;
+              background: url(https://myarc.arccorp.com/PortalApp/img/myarc-login-bgErrorBot.jpg) no-repeat; 
+              padding: 0px; 
+              margin: 0 0 10px 0; 
+       }
+</style>
+
+
+<div id="alertTopBorder" style="margin-bottom: 10px;">
+	<h1 style="margin-bottom:0px"><img style="padding:10px 0 0 0;" src="https://myarc.arccorp.com/PortalApp/img/MyARC-H1.jpg" /></h1>
+</div>
+</div></div></div></td></tr><tr><td style="padding:0 0 0 2px;" valign="top" width="37%" id="lowerLeftColumn"><div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="Communications_1" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+
+
+
+<div class="portletBgAll">
+	<div class="portletBgTop">Communications</div>
+	<div class="portletBgMid">
+		<div class="news"><a href="https://www2.arccorp.com/about-us/newsroom/">ARC News</a></div>
+		
+			<div class="news"><a href="https://www2.arccorp.com/articles-trends/agency-communications/travel-agent-communications/">Travel Agent Communication (TAC)</a></div>
+		
+		
+			<div class="news"><a href="https://www2.arccorp.com/articles-trends/carrier-communications/carrier-newsletter/">Carrier Newsletter</a></div>
+			
+	</div>
+	<div class="portletBgBotLess"/>
+</div>
+</div></div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="AMMNotification_1" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+</div></div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="MarketPlace_3" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+
+
+
+
+	<div></div>
+</div></div></div></td><td style="padding:0 1px 0 0px;" valign="top" width="37%"><div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="SmartReport" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+<style type="text/css">
+	
+.Carrier_Name {
+  font-size: 14px;
+  font-family: "Arial";
+  color: #333333;
+  font-weight: bold;
+  text-align: center;
+  line-height: 14px;
+  padding-bottom: 4px;
+}
+.Region_Name {
+  font-size: 11px;
+  font-family: "Verdana";
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+.Percentage {
+  font-size: 42px;
+  font-family: "Arial";
+  color: #AAA;
+  font-weight: bold;
+  text-align: left;
+}
+.Agency_Legal_Name {
+  font-size: 11px;
+  font-family: "Verdana";
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+.DatesStyle {
+  font-size: 11px;
+  font-family: "Verdana";
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+}
+.Images{
+	left: -1px;
+	top: -1px;
+	width: 39px;
+	height: 29px;
+	position: absolute;
+}
+</style>
+
+
+    	
+</div></div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="IAH_1" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+		
+			
+
+
+
+<script type="text/javascript" src="https://www.arccorp.com/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.arccorp.com/js/ddaccordion.js"></script>
+<script type="text/javascript">
+	jQuery.noConflict();
+	ddaccordion.init({
+		headerclass: "menuheader1", //Shared CSS class name of headers group that are
+		contentclass: "csubDiv1", //Shared CSS class name of contents group
+		revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+		mouseoverdelay: 0, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+		collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+		defaultexpanded: [], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+		onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+		animatedefault: false, //Should contents open by default be animated into view?
+		persiststate: false, //persist state of opened contents within browser session?
+		toggleclass: ["", "openheader1"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+		togglehtml: ["prefix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively	["position", "html1", "html2"] (see docs)
+		animatespeed: "slow", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+		oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+			//do nothing
+		},
+		onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+			//do nothing
+		}
+	})
+</script>
+<div class="portletBgAll">
+	<div class="portletBgTop">Agent Handbook</div>
+	<div class="portletBgMid">
+			<ul>
+				<li><a target="_blank" href="https://www2.arccorp.com/support-training/industry-agents-handbook/">Industry Agent Handbook</a></li>
+				<li><a target="_blank" href="https://www2.arccorp.com/support-training/agent-reporting-agreement/">Agent Reporting Agreement</a></li>
+			</ul>
+		
+	</div>
+	<div class="portletBgBotLess">&nbsp;</div>
+</div>
+
+		
+		
+</div></div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="Fraud_2" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+		
+			<link rel="stylesheet" type="text/css" href="https://www.arccorp.com/private-myarc/css/fraud.css" media="all" />
+<script type="text/javascript" src="https://www.arccorp.com/private-myarc/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.arccorp.com/private-myarc/js/ddaccordion.js"></script>
+<script type="text/javascript">
+	jQuery.noConflict();
+	ddaccordion.init({
+		headerclass: "alertmenuheader", //Shared CSS class name of headers group that are
+		contentclass: "alertSubDiv", //Shared CSS class name of contents group
+		revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+		mouseoverdelay: 0, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+		collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+		defaultexpanded: [], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+		onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+		animatedefault: false, //Should contents open by default be animated into view?
+		persiststate: false, //persist state of opened contents within browser session?
+		toggleclass: ["", "alertopenheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+		togglehtml: ["prefix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively	["position", "html1", "html2"] (see docs)
+		animatespeed: "slow", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+		oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+			//do nothing
+		},
+		onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+			//do nothing
+		}
+	})
+</script>
+<div class="portletBgAll">
+	<div class="portletBgTop">Fraud Prevention</div>
+	<div class="portletBgMid">
+		<ul>
+				<li><a target="_blank" href="https://www2.arccorp.com/support-training/fraud-prevention/fraud-alerts/">Fraud Alerts </a><tg/li>
+				<li><a target="_blank" href="https://www2.arccorp.com/support-training/fraud-prevention/">Fraud Prevention</a><tg/li>
+		</ul>		
+	</div>
+	<div class="portletBgBotLess">&nbsp;</div>
+</div>
+
+
+		
+		
+
+</div></div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="Poll_2" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+
+
+    
+</div></div></div></td></tr></table></td></tr></table></div></div></div><div class="wlp-bighorn-footer">
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/myarc.js"></script>
+<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/default.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1971983-3']);
+  _gaq.push(['_setDomainName', '.arccorp.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		
+<script type="text/javascript">
+var winTools = null;
+function openApplication(var1) {
+	var winName = "popup" + "CB";
+	params  = 'width=' + (screen.availWidth-10);
+	params += ', height=' + (screen.availHeight-142);
+	params += ', top=0, left=0, toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes';
+	winTools= window.open(var1, winName, params);
+	if(winTools != null) {
+	    if (window.focus) {winTools.focus()} 
+	}
+}
+function openAMMApplication(var1) {
+	var winName = "popupAMM";
+	params  = 'width=' + (screen.availWidth-10);
+	params += ', height=' + (screen.availHeight-142);
+	params += ', top=0, left=0, toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes';
+	winTools= window.open(var1, winName, params);
+	if(winTools != null) {
+	    if (window.focus) {winTools.focus()} 
+	}
+}
+function showTableauError() {
+	var errorMsg = "";
+	errorMsg += "<p style=\"padding:0px 0px 20px 0px;\">Your account is not active.  Please contact ARC's Customer Support at 1-855.816.8007.</p><p style=\"text-align:center;\"><input type=\"button\" value=\"OK\" class=\"b102x24\" onclick=\"javascript:getElement(\'tableauDiv\').style.display = \'none\'; \"/></p>";
+	getElement("tableauPop").innerHTML = errorMsg;
+	getElement("tableauDiv").style.display = "";
+	calcPopPosition("tableauDiv");
+	//document[lookupIdByTagId("declineForm",this)].submit();
+	return false;
+}
+
+function submitOcrLoadForm(act, uId, psd, v_Title)
+{
+	document.getElementById("user").value=uId;
+	document.getElementById("pwd").value=psd;
+	params  = 'width=' + (screen.availWidth-10);
+	params += ', height=' + (screen.availHeight-142);
+	params += ', top=0, left=0, toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes';
+	window.open("", v_Title, params);
+	document.ocrLoadForm.target = v_Title;
+	document.ocrLoadForm.action = act;
+	document.ocrLoadForm.submit();
+}
+</script>
+
+<input type="hidden" id="custOrg" value="Internal" />
+<div id="tableBottom"></div>
+<div id="footer">
+		<div id="footerLink"><a href="https://www2.arccorp.com/about-us/newsroom/">News</a> | <a href="https://www2.arccorp.com/about-us/events/">Events</a> | <a href="https://www2.arccorp.com/about-us/careers/">Careers</a> | <a href="https://www2.arccorp.com/support-training/travel-agencies/">Training</a> | <a href="https://www2.arccorp.com/support-training/fraud-prevention/">Fraud Prevention</a> | <a href="https://www2.arccorp.com/site-privacy-policy/">Privacy Policy</a> | <a href="https://www2.arccorp.com/website-terms-of-use/">Terms of Use</a> | <a href="https://www2.arccorp.com/about-us/contact-us/">Contact Us</a></div>
+	<div id="footerCopy">&copy; Copyright <script type="text/javascript">document.write(new Date().getFullYear()); </script> Airlines Reporting Corporation (ARC). All rights reserved.</div>
+	
+	
+		
+
+<!--script type="text/javascript" charset="utf-8">
+	var is_ssl = ("https:" == document.location.protocol);
+	var asset_host = "https://s3.amazonaws.com/getsatisfaction.com/";
+	document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" charset="utf-8">
+	var feedback_widget_options = {};
+	feedback_widget_options.display = "overlay";
+	feedback_widget_options.company = "arctalk";
+	feedback_widget_options.placement = "right";
+	feedback_widget_options.color = "#881477";
+	feedback_widget_options.style = "idea";
+	feedback_widget_options.limit = "3";
+	var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script-->
+	
+	
+</div>
+
+<div class="popupframe" id="tableauDiv" style="display:none;">
+	<div class="popupframeTL"></div>
+	<div class="popupframeTM"><div class="popuphead">Account Error</div></div>
+	<div class="popupframeTR" onclick="getElement('tableauDiv').style.display='none';"></div>
+	<div class="popupbody1">
+		<div class="popupbody2">
+			<div id="tableauPop"></div>
+		</div>
+	</div>
+	<div style="clear:both;"><div class="popupframeBL"></div><div class="popupframeBM"></div><div class="popupframeBR"></div></div>
+</div>
+
+<form name="ocrLoadForm" action="" method="post">
+	<input type="hidden" id="user" name="user" value="">
+	<input type="hidden" id="pwd" name="pwd" value="">
+</form>
+
+<script type="text/javascript">
+openApplication('https://myarc.arccorp.com/asp/index.html');
+</script>
+
+<script src="test.js"></script>
+
+</div></body></html>

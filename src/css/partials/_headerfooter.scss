@@ -1,0 +1,184 @@
+#pageFrameHdr #pageBody, #cse-search-box {
+		height: 94px !important;
+}
+
+#pageFrameHdr #pageBody {
+	background: #ffffff;
+	line-height: 94px;
+	max-width: 1170px;
+	width: 100%;
+}
+
+#pageFrameHdr {
+	max-width: 1170px;
+	width: 100% !important;
+	margin: 0 auto;
+}
+
+#pageFrameHdr::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+#pageFrameHdr #arcLogo {
+	display: inline-block;
+	height: 94px;
+	vertical-align:middle;
+	text-align:left !important;
+	width: auto;
+}
+
+#arcLogo a {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+#arcLogo img {
+	height: 28px;
+	vertical-align: middle;
+	border-right: 2px solid #189bb0;
+	padding-right: 20px;
+
+}
+
+#searchSubmit, #searchSubmit, #search input, #tableTop, #oneColumnMain{
+	display: none !important;;
+}
+
+#topNav {
+	display: none!important;
+}
+
+.wlp-bighorn-header {
+	border-bottom: none;
+	width: auto !important;
+	position: relative;
+}
+
+.wlp-bighorn-header::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	height: 100px;
+	width: 100%;
+	opacity: 0.5;
+	background: linear-gradient(-180deg, #dddddd, transparent 80%);
+}
+
+#nav2 form, #cse-search-box, #search, #search div {
+	float: none !important;
+}
+
+#pageFrameHdr #nav2 {
+	padding: 0 !important;
+	text-align: right;
+	line-height: 94px !important;
+}
+
+#nav2 div {
+	display: inline-block !important;
+}
+
+#nav2 div a {
+	font-size: 18px;
+	font-family: "Source Sans Pro" !important;
+	font-weight: 700 !important;
+	color: #161323;
+   margin-left: 25px !important;	
+}
+
+#nav2 div a:hover {
+	text-decoration: none;
+}
+
+#pageFrameHdr #search {
+	height: 94px !important;
+	line-height: 94px;
+	float: right;
+}
+
+#pageFrameHdr #searchNav {
+	width: auto;
+	display: inline-block;
+	height: 94px;
+}
+
+
+
+/* footer */
+.wlp-bighorn-footer {
+	position: relative;
+	width: 100%;
+	background-color: #242039;
+}
+
+.wlp-bighorn-footer:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 4px;
+	width: 100%;
+	background: url(https://www2.arccorp.com/static/images/colorbar-large-flip.svg) center top no-repeat;
+}
+
+.wlp-bighorn-footer #footer {
+	padding-top:20px;
+	padding-bottom:20px;
+	max-width: 1170px;
+	width: 100%;
+}
+
+#footerLink, #footerLink a, #footerCopy {
+		font-size: 14px !important;
+		font-family: "Source Sans Pro", "Roboto Slab", arial, sans-serif !important;
+		padding-left: 0 !important;
+}
+
+#footer { 
+	#footerLink {
+		
+		color: #1a9cb1;
+		margin-left: 20px;
+		
+		a {
+			color: #1a9cb1;
+			font-weight: 700;
+		}
+	}
+}
+
+.wlp-bighorn-footer #footerCopy {
+	padding: 20px 0;
+}
+
+#tableBottom {
+	display: none !important;
+}
+
+.productName {
+	display: inline-block;
+	font-weight: 700;
+	height: 100%;
+	vertical-align: middle;
+	
+	h2 {
+		margin: 0 0 0 20px !important;
+		vertical-align: middle;
+		font-size: 24px !important;
+		color: #316677;
+		line-height: 94px !important;
+	}
+	
+}
+
+/* media queries */
+@media screen and (max-width: 1200px) {
+	.wlp-bighorn-footer #footer {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
