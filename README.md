@@ -8,7 +8,7 @@ Clone the git repository and make sure to install the mode modules:
 ```shell  
 git clone https://github.com/AirlinesReportingCorporation/myarc_static.git
 
-cd minified-scripts
+cd myarc-static
 
 npm install
 ```
