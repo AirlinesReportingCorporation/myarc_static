@@ -23,15 +23,15 @@
 
 #pageFrameHdr #arcLogo {
 	display: inline-block;
-	height: 94px;
+	height: auto;
 	vertical-align:middle;
 	text-align:left !important;
 	width: auto;
+	float: none !important;
 }
 
 #arcLogo a {
 	display: inline-block;
-	height: 100%;
 	vertical-align: middle;
 }
 
@@ -40,7 +40,7 @@
 	vertical-align: middle;
 	border-right: 2px solid #189bb0;
 	padding-right: 20px;
-
+  margin-top: 0 !important;
 }
 
 #searchSubmit, #searchSubmit, #search input, #tableTop, #oneColumnMain{
@@ -122,7 +122,8 @@
 	left: 0;
 	height: 4px;
 	width: 100%;
-	background: url(https://www2.arccorp.com/static/images/colorbar-large-flip.svg) center top no-repeat;
+	background: url(https://www2.arccorp.com/static/images/colorbar-large-flip.svg) center top repeat;
+	background-size: contain;
 }
 
 .wlp-bighorn-footer #footer {
@@ -147,12 +148,14 @@
 		a {
 			color: #1a9cb1;
 			font-weight: 700;
+			margin: 0 7px;
 		}
 	}
 }
 
 .wlp-bighorn-footer #footerCopy {
 	padding: 20px 0;
+	display: inline-block;
 }
 
 #tableBottom {
@@ -175,10 +178,63 @@
 	
 }
 
+#footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px 0px 0px 15px;
+		display: inline-block;
+		vertical-align: middle;
+}
+
+#footer ul li {
+	display: inline-block;
+}
+
+#footer .footer-links-social li a {
+    display: block;
+    width: 50px;
+    position: relative;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+		
+		&:hover {
+			text-decoration: none;
+		}
+}
+
+#footer .footer-links-social li a.icon-iso_logo:before {
+
+    font-size: 36.8px;
+
+}
+
+#footer .footer-links-social li a::before {
+		color: #ffffff;
+    font-size: 22px;
+}
+
+.icon-twitter, .icon-facebook, .icon-instagram {
+	padding:10px;
+}
+
+#footer .footer-links-social li a.icon-twitter {
+	margin-left: 5rem;
+}
+
 /* media queries */
 @media screen and (max-width: 1200px) {
 	.wlp-bighorn-footer #footer {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+}
+
+@media screen and (min-width: 768px){
+footer .footer-links-social li a, footer .add-content li a {
+    width: 2.375rem;
+    height: 2.375rem;
+}
 }
