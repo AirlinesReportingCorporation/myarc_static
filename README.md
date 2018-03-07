@@ -1,6 +1,6 @@
 # My ARC CSS/JS Workflow
 
-This repository uses [https://npmjs.org/package/node-sass](node-sass), providing a CSS precomiler to provide better modularity and flexibility.  Similarly, javascript is precomiled using [https://babeljs.io/](babel) to provide support for ES6 syntax and for its use of `import` for javascript modularity.
+This repository uses [https://github.com/sass/node-sass](https://github.com/sass/node-sass), providing a CSS precomiler to provide better modularity and flexibility.  Similarly, javascript is precomiled using [https://babeljs.io/](https://babeljs.io/) to provide support for ES6 syntax and for its use of `import` for javascript modularity.
 
 ## Install
 Clone the git repository and make sure to install the mode modules:
@@ -51,7 +51,6 @@ myarc_static/
 |   |-- js / 
 |       |-- main.js
 |
-|-- webpack.config.js
 |
 |-- package.json
 |-- README.md
