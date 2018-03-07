@@ -233,9 +233,28 @@
 	}
 }
 
-@media screen and (min-width: 768px){
-footer .footer-links-social li a, footer .add-content li a {
-    width: 2.375rem;
-    height: 2.375rem;
+@media screen and (max-width: 768px){
+	#pageFrameHdr #arcLogo {
+		text-align: center !important;
+	}
+	#pageFrameHdr #searchNav {
+		display: none;
+		width: 100%;
+	}
+	#pageFrameHdr #nav2 {
+		text-align: center;
+	}
+	#pageFrameHdr #pageBody {
+		text-align: center;
+	}
+	#nav2 div {
+		display: block !important;
+	}
 }
+
+@media screen and (min-width: 768px){
+	footer .footer-links-social li a, footer .add-content li a {
+			width: 2.375rem;
+			height: 2.375rem;
+	}
 }

@@ -43,10 +43,15 @@ h6 {
 	margin-bottom: 0;
 }
 
+.wlp-bighorn-layout td {
+	padding: 0;
+}
+
 .wlp-bighorn-page {
 	  position: relative;
 		width: 1170px;
 		height: auto;
+		padding: 0;
 }
 
 .wlp-bighorn-book-content {
@@ -60,11 +65,18 @@ h6 {
 
 .wlp-bighorn-book-content .wlp-bighorn-theme-borderless .wlp-bighorn-window {
 	margin-left: 0;
+	margin-right: 0;
+}
+
+.wlp-bighorn-header #pageFrameHdr {
+	padding-left:15px;
+	padding-right: 15px;
 }
 
 @media screen and (max-width: 1169px) {
 	.wlp-bighorn-book-content {
 		width:100% !important;
+		padding: 15px;
 	}
 }
 

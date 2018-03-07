@@ -37,18 +37,22 @@
 		width:100%;
 	}
 	
+	.spgcontent {
+		font-size: 0px !important;
+	}
+	
 	#myARCrightCol {
 			color: #ffffff;
-			width: auto !important;
 			margin-right: 0px !important;
-			margin-left: 00px !important;
+			margin-left: 0px !important;
 			padding-left: 30px;
 			padding-right: 30px;
+			width: 75% !important;
 	}
 	
 	#myARCleftCol {
 		background: #ffffff;
-		width: 320px;
+		width: 25% !important;
 	}
 	
 	#myARCrightCol h1, #myARCrightCol h2, #myARCrightCol h3, #myARCrightCol h4{
@@ -58,11 +62,6 @@
 	#myARCLoginBodyB {
 		padding-top: 10px;
 		background: #eeeeee;
-	}
-	
-	.loginPortlet1 {
-		max-width: 740px;
-		width:100%;
 	}
 }
 
@@ -83,10 +82,6 @@
 #myARCLoginBodyT, #myARCLoginBodyB, #myARCLoginBodyTLong {
 	padding: 20px !important;
 	width: auto !important;
-}
-
-#myARCLoginBodyT, #myARCLoginBodyB {
-	min-width: 320px !important;
 }
 
 #myARCLoginBodyB div {
@@ -132,7 +127,7 @@ form input[type="password"], form input[type="text"] {
 		max-height: 38px;
     transition: border-color 250ms cubic-bezier(.27,.01,.38,1.06),box-shadow 250ms cubic-bezier(.27,.01,.38,1.06);
 		width: 100% !important;
-		max-width: 350 !important;
+		max-width: 350px !important;
 }
 
 #frmMyARCLogin div {
@@ -157,6 +152,10 @@ form input[type="password"], form input[type="text"] {
 	max-width: 150px;
 }
 
+.loginPortlet1 h1 {
+			font-size: 4rem !important;
+	}
+
 @media screen and (max-width: 1187px){
 	#MyARC_Login {
 		width:100%;
@@ -174,4 +173,17 @@ form input[type="password"], form input[type="text"] {
 	#MyARC_Login #myARCleftCol, #MyARC_Login #myARCrightCol {
 		display: block;
 	}
+	#MyARC_Login #myARCleftCol, #MyARC_Login #myARCrightCol {
+		width: 100% !important;
+	}
+	
+	.loginPortlet1 h1 {
+			font-size: 2rem !important;
+	}
+	
+	form input[type="password"], form input[type="text"] {
+		max-width: 100% !important;
+	}
+
+	
 }
