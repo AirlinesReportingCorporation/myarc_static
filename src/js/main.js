@@ -53,3 +53,8 @@ $("#nav2").html($("#nav2").html().replace("|", "").replace("|", ""));
 
 $("#arcLogo").after("<div class='productName'><h2>My ARC</h2></div>");
 
+$("#pageFrameHdr").prepend("<div class='mobile-icon'><img src='https://www2.arccorp.com/globalassets/icons/hamburger-icon.jpg'></div>");
+
+$(".mobile-icon").click(function(){
+	$("#searchNav").toggle();
+});

@@ -13,6 +13,8 @@
 	max-width: 1170px;
 	width: 100% !important;
 	margin: 0 auto;
+
+	
 }
 
 #pageFrameHdr::after {
@@ -30,6 +32,32 @@
 	float: none !important;
 }
 
+#pageFrameHdr {
+
+	.mobile-icon {  
+		display: none;
+		position: absolute;
+		height: 94px;
+		vertical-align: middle;
+		line-height: 94px !important;
+		
+		&:hover {
+			cursor: pointer;
+		}
+		
+		img {
+			position:relative;
+			vertical-align: middle;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			padding-left: 20px;
+		}
+	}
+	
+}
+
 #arcLogo a {
 	display: inline-block;
 	vertical-align: middle;
@@ -43,9 +71,39 @@
   margin-top: 0 !important;
 }
 
-#searchSubmit, #searchSubmit, #search input, #tableTop, #oneColumnMain{
-	display: none !important;;
+#searchSubmit, #searchSubmit, #tableTop, #oneColumnMain{
+	display: none !important;
 }
+
+#searchInput {
+	position: relative;
+	
+}
+
+#searchInput input[type="text"] {
+	background: transparent;
+	border: none;
+	position: relative;
+	padding-right: 40px;
+	text-align: right;
+	max-width: 200px !important;
+}
+
+#searchInput input[type="text"]:focus {
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+#searchInput:after {
+font-family: icomoon;
+    content: "\e901";
+    position: absolute;
+    right: 0px;
+    font-size: 28px;
+    top: 8px;
+		color: #333333;
+} 
 
 #topNav {
 	display: none!important;
@@ -57,7 +115,7 @@
 	position: relative;
 }
 
-.wlp-bighorn-header::after {
+.wlp-bighorn-header:after {
 	content: '';
 	position: absolute;
 	top: 100%;
@@ -75,7 +133,7 @@
 #pageFrameHdr #nav2 {
 	padding: 0 !important;
 	text-align: right;
-	line-height: 94px !important;
+	margin-top:10px;
 }
 
 #nav2 div {
@@ -83,11 +141,12 @@
 }
 
 #nav2 div a {
-	font-size: 18px;
+	font-size: 16px;
 	font-family: "Source Sans Pro" !important;
 	font-weight: 700 !important;
-	color: #161323;
-   margin-left: 25px !important;	
+	color: #189bb0;
+   margin-left: 20px !important;	
+	 text-transform: uppercase;
 }
 
 #nav2 div a:hover {
@@ -98,6 +157,7 @@
 	height: 94px !important;
 	line-height: 94px;
 	float: right;
+	padding: 0;
 }
 
 #pageFrameHdr #searchNav {
@@ -123,7 +183,6 @@
 	height: 4px;
 	width: 100%;
 	background: url(https://www2.arccorp.com/static/images/colorbar-large-flip.svg) center top repeat;
-	background-size: contain;
 }
 
 .wlp-bighorn-footer #footer {
@@ -141,7 +200,6 @@
 
 #footer { 
 	#footerLink {
-		
 		color: #1a9cb1;
 		margin-left: 20px;
 		
@@ -240,6 +298,7 @@
 	#pageFrameHdr #searchNav {
 		display: none;
 		width: 100%;
+		height: auto !important;
 	}
 	#pageFrameHdr #nav2 {
 		text-align: center;
@@ -247,8 +306,45 @@
 	#pageFrameHdr #pageBody {
 		text-align: center;
 	}
+	#pageFrameHdr #search {
+		background: #242039;
+		height: auto !important;
+	}
 	#nav2 div {
 		display: block !important;
+		padding: 2.375rem 4.375rem 2.375rem 1.875rem !important;
+		text-align: left;
+		margin-left: 0 !important;
+		border-top: 3px solid #1d1933;
+	}
+	#search #nav2  a {
+		color: #189bb0;
+	}
+	#cse-search-box {
+		height:auto !important;
+	}
+	#pageFrameHdr .mobile-icon {
+		display:block;
+	}
+	#footer { 
+		#footerLink {
+			display: block;
+			margin-left: 0px;
+			text-align: center;
+			padding: 10px;
+		}
+	}
+	#footer .footer-links-social li a {
+		width: 40px;
+	}
+	#footer ul {
+		padding-left: 0;
+	}
+	#myARCrightCol {
+		margin-top: 40px !important;
+	}
+	#searchInput {
+		display: none;
 	}
 }
 
