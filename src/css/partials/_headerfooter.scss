@@ -289,6 +289,10 @@ font-family: icomoon;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+	body #pageFrameHdr {
+		padding-right: 25px;
+		padding-left: 25px;
+	}
 }
 
 @media screen and (max-width: 768px){
@@ -309,6 +313,10 @@ font-family: icomoon;
 	#pageFrameHdr #search {
 		background: #242039;
 		height: auto !important;
+	}
+	body #pageFrameHdr {
+		padding-right: 0;
+		padding-left: 0;
 	}
 	#nav2 div {
 		display: block !important;
