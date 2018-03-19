@@ -182,12 +182,7 @@
 		}, { "../write": 17 }] }, {}, [13])(13);
 });
 
-console.log("test");
-
-if (document.addEventListener) {
-	$("html").addClass("ie9");
-	flexibility(document.documentElement);
-}
+flexibility(document.documentElement);
 
 // add tag to dom for html 
 $(".wlp-bighorn-book").after("<div class='loginPortlet'></div>");
