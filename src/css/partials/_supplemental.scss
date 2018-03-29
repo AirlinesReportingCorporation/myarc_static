@@ -130,9 +130,10 @@
 	
 	label {
 		height: auto;
+		padding: 0px 5px 0px 0px;  
 	}
 	
-	form input[type="password"], form input[type="text"] {
+	form input[type="password"], form input[type="text"], form select { 
 		width: 250px !important;
 		margin-bottom:  5px;
 	}
@@ -141,14 +142,18 @@
 		margin: 0 !important;
 	}
 	
+	#frmWPhoneExt {
+		width: 75px !important; 
+	}
+	
 	.categoryitems {
-			border-top: 2px solid #eaeaea;
-			padding: 10px;
-		}
-		
-		.csubDiv {
-			width: 100%; 
-		}
+		border-top: 2px solid #eaeaea;
+		padding: 10px;
+	}
+	
+	.csubDiv {
+		width: 100%; 
+	}
 	
 	
 }
