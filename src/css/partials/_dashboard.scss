@@ -40,10 +40,17 @@
 		}
 		
 		.portletBgTop {
+			background: #ffffff;
 			border: none;  
+			border-top: solid 4px #306879;
+			color: #1a9cb1;
 			border-radius: 0; 
 			width: auto; 
 			height: auto;
+			font-size: 18px !important;
+			font-weight: 700; 
+			padding-left: 15px;
+			padding-bottom: 0;
 		}
 		
 		.portletBgMid {

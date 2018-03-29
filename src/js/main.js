@@ -2,73 +2,90 @@
 
 flexibility(document.documentElement); 
 
-// add tag to dom for html 
-$(".wlp-bighorn-book").after("<div class='marketingPortlet'></div>");
+(function() {
+	// add tag to dom for html 
+	$(".wlp-bighorn-book").after("<div class='marketingPortlet'></div>");
 
-// get query for login
-$.getJSON( "https://arcintgepi.arccorp.com/myarccomp/updated/data.json", function( data ) {
+	// get query for login
+	$.getJSON( "https://arcintgepi.arccorp.com/myarccomp/updated/data.json", function( data ) {
+		
+		//code to sanitize JSON input to prevent injection
+		/* 
+			- minimal santize on code since json will be hosted on documetum / EPi - access only granted to super admins on backend
+			- prevent script tags to run
+		*/
+		
+		if($("#frmMyARCLogin").attr("name") == "frmMyARCLogin") {
+			$(".marketingPortlet" ).html(data["login"].body);
+			$("#myARCrightCol").html(data["login"].ads);
+		}
+		
+		//grab hidden input val() for switch conditional
+		console.log($("#custOrg").val());
+		
+		var segment = $("#custOrg").val();
+		var sideBar = $(".wlp-bighorn-layout tr td").eq(0);
+		var section = $(".wlp-bighorn-layout tr td").eq(1);
+		
+		sideBar.attr("id", "dashboardSidebar");
+		section.attr("id", "portletCol");
+		
+		section.find("table").append("<tr><td colspan='2' class='dashboardPortlet'></td><tr/>"); 
+		
+		
+		switch (segment) {
+			case "Internal":
+				$(".dashboardPortlet" ).html(data["login"].body);
+				break;
+			
+			case "Carrier":
+				$(".dashboardPortlet" ).html(data["carrier"].body);
+				break;
+			
+			case "Agency":
+				$(".dashboardPortlet" ).html.after(data["agency"].body);
+				break;
+				
+			case "VTC":
+				$(".dashboardPortlet" ).html.after(data["VTC"].body);
+				break;
+				
+			default:
+				break;
+		}
+		
+	});
+
+	// html DOM edits
+	$("#ARC_Home").parent().parent().addClass("dashboardBG");
+	$("#leftCol #myARCleftNavTop div").eq(0).addClass("accountInfo"); 
 	
-	//code to sanitize JSON input to prevent injection
-	/* 
-		- minimal santize on code since json will be hosted on documetum / EPi - access only granted to super admins on backend
-		- prevent script tags to run
-	*/
-	
-	if($("#frmMyARCLogin").attr("name") == "frmMyARCLogin") {
-		$(".marketingPortlet" ).html(data["login"].body);
-		$("#myARCrightCol").html(data["login"].ads);
+	/* if notifications */
+	if($("#alertBody1").length !== 0 || $(".alertframeLong").length !== 0){
+			var alertHtml = "";
+			$(".wlp-bighorn-header").after("<div class='alertBar'><div class='alertBar-inner'></div></div>");
+			
+			if($(".alertframeLong").length !== 0){
+				alertHtml = $(".alertframeLong table").find("td").eq(1).html(); 
+				$(".alertframeLong").parent().hide();
+			}
+			else { 
+				alertHtml = $("#alertBody1").html(); 
+			}
+			
+			$(".alertBar-inner").html(alertHtml); 
 	}
 	
-	//grab hidden input val() for switch conditional
-	console.log($("#custOrg").val());
-	
-	var segment = $("#custOrg").val();
-	var sideBar = $(".wlp-bighorn-layout tr td").eq(0);
-	var section = $(".wlp-bighorn-layout tr td").eq(1);
-	
-	sideBar.attr("id", "dashboardSidebar");
-	section.attr("id", "portletCol");
-	
-	section.find("table").append("<tr><td colspan='2' class='dashboardPortlet'></td><tr/>"); 
-	
-	
-	switch (segment) {
-		case "Internal":
-			$(".dashboardPortlet" ).html(data["login"].body);
-			break;
-		
-		case "Carrier":
-			$(".dashboardPortlet" ).html(data["carrier"].body);
-			break;
-		
-		case "Agency":
-			$(".dashboardPortlet" ).html.after(data["agency"].body);
-			break;
-			
-		case "VTC":
-			$(".dashboardPortlet" ).html.after(data["VTC"].body);
-			break;
-			
-		default:
-			break;
-	}
-	
-});
+	$(".wlp-bighorn-layout .wlp-bighorn-layout-cell").eq(1).addClass("supplementalSection");
 
-// html DOM edits
-$("#ARC_Home").parent().parent().addClass("dashboardBG");
-$("#leftCol #myARCleftNavTop div").eq(0).addClass("accountInfo"); 
+	$("#nav2").html($("#nav2").html().replace(/|/g, ""));
 
-$(".wlp-bighorn-layout .wlp-bighorn-layout-cell").eq(1).addClass("supplementalSection");
+	$("#arcLogo").after("<div class='productName'><h2>My ARC</h2></div>");
 
-$("#nav2").html($("#nav2").html().replace(/|/g, ""));
+	$("#pageFrameHdr").prepend("<div class='mobile-icon'><img src='https://www2.arccorp.com/globalassets/icons/hamburger-icon.jpg'></div>");
 
-$("#arcLogo").after("<div class='productName'><h2>My ARC</h2></div>");
+	$(".mobile-icon").click(function(){
+		$("#searchNav").toggle();
+	});
 
-$(".alertframeLong").parent().css("float", "none").css("position","absolute").css("top", "0").css("left", "0").css("margin", "0").css("width", "100%");
-
-$("#pageFrameHdr").prepend("<div class='mobile-icon'><img src='https://www2.arccorp.com/globalassets/icons/hamburger-icon.jpg'></div>");
-
-$(".mobile-icon").click(function(){
-	$("#searchNav").toggle();
-});
+})();

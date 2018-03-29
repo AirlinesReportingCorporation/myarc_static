@@ -165,6 +165,24 @@ font-family: icomoon;
 	height: 94px;
 }
 
+#myarc_menu #m1 {
+	background: #1d1933;
+	left: 15px;
+	border: none;
+	top: 30px;
+	
+	a {
+		background: #1d1933;
+		padding: 10px 10px;
+		font-size: 14px;
+		margin-left: 10px;
+		color: #189bb0;
+			&:hover {
+				color: #20b8d1; 
+			}
+	}
+}
+
 #myarc_menu + div {
 	float: none !important; 
 	font-size: 16px;

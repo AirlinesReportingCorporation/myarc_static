@@ -12,6 +12,14 @@ html {
 body {
 	background: $white !important;
 	border-box: border-box; 
+	
+	a, a:link, a:visited, a:active {
+		color: #189bb0;
+	}
+	a:hover {
+		color: #20b8d1; 
+	}
+	
 }
 
 body, p, div, span, td, th, label, input, select, option, textarea, sup, sub, ul, ol, li {
@@ -87,7 +95,7 @@ h6 {
 	max-width: 1170px !important; 
 	width:100%;
 	z-index: 10; 
-	
+	min-height: 500px; 
 }
 
 #Breadcrumb_1, #Breadcrumb_2 {
@@ -109,6 +117,8 @@ h6 {
 	padding: 60px 0;
 }
 
+/* accordions */
+
 .wlp-bighorn-page {
 	.AccordionTitle, .menuheader.expandable {
 		height: auto;  
@@ -122,6 +132,21 @@ h6 {
 		padding-top: 28px;
 		padding-bottom: 28px; 
 		width: 100%; 
+		
+		&:after {
+			font-family: 'icomoon';
+			content: '\e905';
+			position: absolute;
+			right: 15px; 
+		}
+		
+		&.openheadermyARC:after { 
+			content: '\e902';
+		}
+		&.openheader:after {
+			content: '\e902';
+		}
+		
 	}
 
 	.AccordionContainer {

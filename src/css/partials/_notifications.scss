@@ -1,0 +1,24 @@
+.spgcontent {
+	.alertTopLong, .alertBotLong, .alertframeLong {
+		display: none !important;
+	}
+}
+
+#Alerts_1, .alertframeLong {
+	display: none;
+}
+
+.alertBar {
+	background: #fce4bd;
+	padding: 12px 0;
+	z-index: 5; 
+	div {
+		font-size: 18px !important;
+		color: #6c6c6c; 
+	}
+}
+
+.alertBar-inner {
+	max-width: 1170px;
+	margin: 0 auto; 
+}

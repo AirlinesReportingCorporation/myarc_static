@@ -154,7 +154,9 @@
 	.csubDiv {
 		width: 100%; 
 	}
-	
+	.categoryitems.csubDiv #divMiddle + p {     
+		clear: both; 
+	}
 	
 }
 
