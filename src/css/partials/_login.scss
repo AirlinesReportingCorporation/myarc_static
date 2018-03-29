@@ -18,6 +18,7 @@
 		float: none !important;
 		margin: 0;
 		vertical-align: top;
+		position: relative;
 	}
 	
 	#myARCleftCol input[type="button"].b102x24LtBl, #myARCleftCol input[type="submit"].b102x24LtBl, .btn {
@@ -67,6 +68,10 @@
 		padding-top: 10px;
 		background: #eeeeee;
 	}
+}
+
+.yourAcct + p {
+	display: none; 
 }
 
 #myARCLoginBodyT h2.yourAcct, #myARCLoginBodyB h2.myArcAcct {

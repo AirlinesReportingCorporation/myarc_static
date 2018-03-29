@@ -13,14 +13,12 @@
 	max-width: 1170px;
 	width: 100% !important;
 	margin: 0 auto;
-
-	
 }
 
 #pageFrameHdr::after {
   display: block;
   clear: both;
-  content: "";
+  content: '';	
 }
 
 #pageFrameHdr #arcLogo {
@@ -77,7 +75,7 @@
 
 #searchInput {
 	position: relative;
-	
+	text-align: right; 
 }
 
 #searchInput input[type="text"] {
@@ -119,11 +117,12 @@ font-family: icomoon;
 	content: '';
 	position: absolute;
 	top: 100%;
-	left: 0;
-	height: 100px;
+	left: 0; 
+	height: 20px;
 	width: 100%;
-	opacity: 0.5;
-	background: linear-gradient(-180deg, #dddddd, transparent 80%);
+	opacity: 0.2;
+	background: linear-gradient(-180deg, #333, transparent 4%);
+	z-index: 9;
 }
 
 #nav2 form, #cse-search-box, #search, #search div {
@@ -166,7 +165,15 @@ font-family: icomoon;
 	height: 94px;
 }
 
-
+#myarc_menu + div {
+	float: none !important; 
+	font-size: 16px;
+	font-family: "Source Sans Pro" !important;
+	font-weight: 700 !important;
+	color: $arc-dark-grey; 
+	margin-left: 20px !important;
+	text-transform: uppercase;
+}
 
 /* footer */
 .wlp-bighorn-footer {

@@ -1,5 +1,17 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  } 
+
 body {
 	background: $white !important;
+	border-box: border-box; 
 }
 
 body, p, div, span, td, th, label, input, select, option, textarea, sup, sub, ul, ol, li {
@@ -39,6 +51,23 @@ h6 {
 	line-height: 1.8125rem !important;
 }
 
+.btn { 
+		background: #189bb0;
+		background-image: none;
+		padding:10px;
+		color: #ffffff;
+		text-transform: uppercase;
+		height: auto;
+		cursor: pointer;
+		font-size: 14px;
+		font-family: "Source Sans Pro", "Roboto Slab", arial, sans-serif; 
+		font-weight: 600;
+		border: none;
+		border-radius: 4px;
+		margin-right: 7px;
+		width:100%;
+	}
+
 .wlp-bighorn-layout-grid {
 	margin-bottom: 0;
 }
@@ -48,7 +77,6 @@ h6 {
 }
 
 .wlp-bighorn-page {
-	  position: relative;
 		width: 1170px;
 		height: auto;
 		padding: 0;
@@ -56,11 +84,20 @@ h6 {
 
 .wlp-bighorn-book-content {
 	background: transparent !important;
-	width: 1170px !important;
-	padding-top: 40px;
-	padding-bottom: 40px;
-	height: auto;
-	min-height: auto;
+	max-width: 1170px !important; 
+	width:100%;
+	z-index: 10; 
+	
+}
+
+#Breadcrumb_1, #Breadcrumb_2 {
+	#breadcrumb {
+		margin: 0;
+		height: auto;
+		a {
+			font-size: inherit; 
+		}
+	}
 }
 
 .wlp-bighorn-book-content .wlp-bighorn-theme-borderless .wlp-bighorn-window {
@@ -68,6 +105,37 @@ h6 {
 	margin-right: 0;
 }
 
+.spgcontent {
+	padding: 60px 0;
+}
+
+.wlp-bighorn-page {
+	.AccordionTitle, .menuheader.expandable {
+		height: auto;  
+		background: $white;
+		font-size: 16px;
+		color: #1a9cb1;
+		text-transform: uppercase ;
+		font-weight: 700;
+		border-top: solid 4px #d4d4d4;
+		margin: 0;
+		padding-top: 28px;
+		padding-bottom: 28px; 
+		width: 100%; 
+	}
+
+	.AccordionContainer {
+		background: transparent; 
+		width: 100%;  
+		.categoryitems {
+			border-top: 2px solid #eaeaea;
+			padding: 10px;
+		}
+		
+	}
+
+	
+}
 @media screen and (max-width: 1169px) {
 	.wlp-bighorn-book-content {
 		width:100% !important;

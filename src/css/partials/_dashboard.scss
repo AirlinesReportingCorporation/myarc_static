@@ -1,0 +1,164 @@
+.dashboardBG, #ARC_MigrateTool {
+		//background: #f7f7f7 no-repeat; 
+		position: relative; 
+		background-size: cover;
+		background-position:center center; 
+		padding: 40px;
+		
+		&:before {
+			//display: none; 
+		}
+		
+		h2.yourAcct {
+			color: #ffffff;  
+		}
+		
+		/*.wlp-bighorn-book-content, .wlp-bighorn-page {
+			width: 100%;
+			max-width: 100% !important;
+		}*/
+		
+		.wlp-bighorn-book-content {
+			background: #f6f6f6 !important; 
+		}
+		
+		#alertTopBorder  {
+			border-top: 0;
+			width: 100%;
+			h1 img {display: none; }
+		}
+		
+		#portletCol table {
+			width: 100%; 
+		}
+		
+		.portletBgAll {
+			margin:0 10px 20px 10px;
+			background: #ffffff;
+			width: auto; 
+			border: 1px solid #d4d4d4;
+		}
+		
+		.portletBgTop {
+			border: none;  
+			border-radius: 0; 
+			width: auto; 
+			height: auto;
+		}
+		
+		.portletBgMid {
+			padding: 15px;
+			border: none;
+			width: 100%; 
+		}
+		
+		.portletBgBotLess, #leftNavBot {
+			display: none;
+			width: 100%;
+		}
+		
+		#myARCleftNavTop {
+			background: $white; 
+		}
+		
+		#lowerLeftColumn {
+			height: auto !important; 
+		}
+		
+		#myARCleftNavTop {
+			padding: 0; 
+		}
+		
+		#leftNav {
+			border-radius: 0;
+			background: transparent;
+			width: 100%; 
+		}
+		
+		#myARCleftNavTop {
+			width: 100%; 
+		}
+		
+		#leftCol {
+			width: 100%; 
+		}
+		
+		.wlp-bighorn-window-content {
+			width: 100% !important;
+		} 
+		
+
+		
+		#Form {
+			display: none;
+		}
+		
+		.accountInfo {
+			padding: 20px !important; 
+			background: #189bb0;
+		}
+		
+		.openheadermyARC, .AccordionTitle {
+			background: #ffffff;  
+			width: 100%; 
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		
+		.wlp-bighorn-layout {
+			height: 100%;
+		}
+		
+		#dashboardSidebar {
+			height: 100%; 
+			
+			.wlp-bighorn-theme + .wlp-bighorn-theme {
+				display: none; 
+			}
+			
+			.wlp-bighorn-theme-borderless {
+				background: #ffffff; 
+				//height: 100%; 
+				margin-right: 20px;  
+				margin-top: 14px;
+				border: 1px solid #d4d4d4; 
+			}
+			
+		}
+		
+	.txtyrAcct {
+		color: #ffffff;
+		
+		span {
+			color: #ffffff !important; 
+			font-weight:bold;
+		}
+		a {
+			color: #ffffff !important;
+		}
+	}
+		
+}
+	 
+#ARC_Home {
+	position:relative; 
+	background: #f7f7f7; 
+	height: 100%; 
+	padding: 20px 40px; 
+	
+
+	
+	#Promos_2 {
+		display: none;
+	}
+	#leftCol, #rightCol {
+		position: relative;
+	}
+	
+	#portletCol {
+		position: relative;
+	}
+	
+	
+	
+}

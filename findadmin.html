@@ -1,0 +1,567 @@
+﻿<!DOCTYPE html>
+<html lang="en-US" class="ie9"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>My ARC</title><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skeletons/myarc/css/layout.css"><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script src="https://myarc.arccorp.com/PortalApp/framework/skeletons/myarc/js/buttons.js" type="text/javascript"></script><script src="https://myarc.arccorp.com/PortalApp/framework/skeletons/myarc/js/util.js" type="text/javascript"></script><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/css/colors.css"><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/css/general.css"><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/css/menu.css"><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/css/window.css"><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/css/wsrp.css"><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/css/custom.css"><link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/framework/skins/myarc/borderless/css/window.css"></head><body><div class="wlp-bighorn-header">
+
+
+
+
+
+
+
+
+
+
+
+<link href="https://myarc.arccorp.com/PortalApp/css/arccorpIE7.css" rel="stylesheet">
+
+ 
+
+	<title>Arilines Reporting Corporation - MyARC</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta http-equiv="Content-Language" content="en-us">
+	<meta http-equiv="Pragma" content="no-cache">
+	<link rel="shortcut icon" href="https://myarc.arccorp.com/PortalApp/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/arccorp.css">
+	<link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/myarcportal.css">
+	<link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/jquery.tabs.css" media="print, projection, screen">
+	<link rel="stylesheet" type="text/css" href="dest/css/main.css?34213453234323">
+	
+	<!--[if IE]>
+	<link href = "https://www2.arccorp.com/globalassets/myarc/bootstrap-ie9.min.css"
+	rel = "stylesheet">
+	<script src = "https://www2.arccorp.com/globalassets/myarc/html5shiv3.7.js" ></script>
+	<![endif]-->
+	
+	<!--[if IE 6]>
+		<link rel="stylesheet" media="all" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/arccorpIE6.css" />
+	<![endif]-->
+	<!--[if IE 7]>
+		<link rel="stylesheet" media="all" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/arccorpIE7.css" />
+	<![endif]-->
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/default.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.blockUI.js"></script>  
+	<!-- <script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.pack.js"></script>-->
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.tabs.pack.js"></script>
+	<script type="text/javascript">
+
+	if(jQuery('#tabsWrapper').length != 0)
+	{
+		jQuery(document).ready(function(){
+					jQuery("#tabsWrapper").tabs();
+		 });
+	}
+		function changeBgImage (image, id) {
+			var element = document.getElementById(id);
+			element.style.backgroundImage = "url("+image+")";
+		}
+		
+		
+		function setCookie(c_name,value,expireminutes)
+		{
+		    var exdate=new Date();
+		    exdate.setMinutes(exdate.getMinutes()+expireminutes);
+		    document.cookie=c_name+ "=" +escape(value)+
+		    ((expireminutes==null) ? "" : "; expires="+exdate);
+		}
+
+		function getToolCookie(c_name)
+		{
+		    if (document.cookie.length>0)
+		    { 
+		        c_start=document.cookie.indexOf(c_name + "=");
+		        if (c_start!=-1)
+		        { 
+		            c_start=c_start + c_name.length+1; 
+		            c_end=document.cookie.indexOf(";",c_start);
+		            if (c_end==-1) c_end=document.cookie.length;
+		            return unescape(document.cookie.substring(c_start,c_end));
+		        } 
+		    }
+		    return "";
+		}
+		    
+		 //Close window
+		 
+		 function closeDep() {			
+		 if(getToolCookie('toolPaging')!="")
+		 {
+		    setCookie('toolPaging',"",-1);
+		 }
+		 if(getToolCookie('resPaging')!="")
+		 {
+		    setCookie('resPaging',"",-1);
+		 }
+		/* if(winHelp!=null)
+		  {
+		    winHelp.close();
+		  }
+		  if (winHelp && winHelp.open && !winHelp.closed)
+		  {
+		     
+		     winHelp.close();
+		  }
+
+		  if(winArc!=null)
+		  {
+		    winArc.close();
+		  }
+		  if (winArc && winArc.open && !winArc.closed)
+		  {
+		     
+		     winArc.close();
+		  }
+		  
+
+		  if(winResources!=null)
+		  {
+		    winResources.close();
+		  }
+		  if (winResources && winResources.open && !winResources.closed)
+		  {
+		     
+		     winResources.close();
+		  }
+		  
+		   if(winContent!=null)
+		  {
+		    winContent.close();
+		  }
+		  if (winContent && winContent.open && !winContent.closed)
+		  {
+		     
+		     winContent.close();
+		  }*/
+		  
+		} 
+function disableLink()
+{
+
+	getElement("enableLink").style.display = 'none';
+	getElement("disableLink").style.display = 'inline';
+   
+}
+
+var timeout	= 500;
+var closetimer	= 0;
+var ddmenuitem	= 0;
+
+function mopen(id)
+{	
+	
+	mcancelclosetime();
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+
+}
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+
+document.onclick = mclose;
+
+
+	</script>
+	
+<style type="text/css">
+	#alertTopBorder {
+		border-top:1px solid #cccccc;
+		display: block;
+		width: 665px;
+	}
+
+#myarc_menu{margin: 0; padding: 0; z-index: 9999}
+#myarc_menu li{	margin: 0; padding: 0; list-style: none;float: left;font: normal 12px arial}
+#myarc_menu li a{display: block;margin: 0 1px 0 0;padding: 4px 10px;width: 160px;background: #fff;color: ##005e9e;text-align: left;text-decoration: none}
+#myarc_menu li a:hover{	background: #fff;text-decoration:underline}
+#myarc_menu div{position: absolute;visibility: hidden;margin: 0;padding: 0;background: #fff;border:#999 1px solid;}
+#myarc_menu div a{position: relative;display: block;margin: 0;padding: 5px 10px;width: auto;white-space: nowrap;text-align: left;text-decoration: none;background: #fff;color: ##005e9e;font: 12px arial}
+#myarc_menu div a:hover{background: #fff;color: ##005e9e}
+</style>
+
+<!--[if lt IE 7.]>
+<script defer type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/pngfix.js"></script>
+<![endif]-->
+<div id="tableTop"><img src="https://myarc.arccorp.com/PortalApp/img/tableTop.png" width="938" height="10" alt=""></div>
+<div id="pageFrameHdr" style="min-height:85px;"><div class="mobile-icon"><img src="https://www2.arccorp.com/globalassets/icons/hamburger-icon.jpg"></div>
+	<div id="pageBody" style="height:85px;">
+		<div id="arcLogo"><a href="https://arcintgepi.arccorp.com/"><img src="https://myarc.arccorp.com/PortalApp/img/arcLogo.jpg" alt="arc" style="margin-top:30px;"></a></div>
+		<div id="searchNav">
+			<div id="search">
+				<form action="http://www.arccorp.com/search.jsp" id="cse-search-box" name="frmSearch">
+					<input type="hidden" name="cx" value="015607577759290326119:htqf1xunjds">
+					<input type="hidden" name="cof" value="FORID:11">
+					<input type="hidden" name="ie" value="UTF-8">
+					<div id="nav2">
+						
+						<div style="float:right; margin:0px 0px 0px 5px; padding:0px 0px 0px 0px;"><a href="https://arcintgepi.arccorp.com/about-us/contact-us/">Contact Us</a></div>
+						<div style="float:right; margin:0px 0px 0px 5px; padding:0px 0px 0px 0px;"><a href="https://intgwww.arccorp.com/webhelp/myarc/" target="_blank">Help</a> </div>
+
+							
+					</div>
+					<div id="searchSubmit" style="clear:both;"><a href="#" onclick="document.frmSearch.submit();" name="sa">GO</a></div>
+					<div id="searchInput"><input type="text" name="q" size="31"></div>
+				</form>
+			</div>
+			<div id="topNav"><script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/milonic_src.js"></script><script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/mmenudom.js"></script>
+				
+					<script type="text/javascript" src="https://intgwww.arccorp.com/js/milonic_src.js"></script><script type="text/javascript" src="https://intgwww.arccorp.com/js/mmenudom.js"></script><script type="text/javascript" src="https://intgwww.arccorp.com/js/menu_data_cart.js"></script><script type="text/javascript" src="https://intgwww.arccorp.com/js/mm_menueditapi.js"></script>
+				
+				
+			</div>
+		</div>
+	</div>
+	
+			<div id="oneColumnMain" style="height:1px;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;">&nbsp;</div>
+		
+</div>
+
+
+
+
+
+
+</div><div id="ArcPublicPortal_portal_book_2" class="wlp-bighorn-book"><div class="wlp-bighorn-book-content"><div id="MyARC_FindAdmin" class="wlp-bighorn-page"><table class="wlp-bighorn-layout wlp-bighorn-layout-grid" width="100%" cellpadding="0" border="0" cellspacing="0"><tbody><tr><td width="100%"><div class="wlp-bighorn-layout-cell wlp-bighorn-layout-grid-cell"><div></div><div class="wlp-bighorn-layout wlp-bighorn-layout-flow"><div class="wlp-bighorn-layout-cell wlp-bighorn-layout-flow-vertical wlp-bighorn-layout-flow-first" style="width: 100%"><div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="FindAdmin_1" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+	<title>Arilines Reporting Corporation - MyARC</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta http-equiv="Content-Language" content="en-us">
+	<meta http-equiv="Pragma" content="no-cache">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/arccorp.css">
+	<link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/myarcportal.css">
+	<link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/jquery.tabs.css" media="print, projection, screen">
+	<link rel="stylesheet" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/validationEngine.jquery.css" media="screen">
+	<!--[if IE 6]>
+		<link rel="stylesheet" media="all" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/arccorpIE6.css" />
+	<![endif]-->
+	<!--[if IE 7]>
+		<link rel="stylesheet" media="all" type="text/css" href="https://myarc.arccorp.com/PortalApp/css/arccorpIE7.css" />
+	<![endif]-->
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/default.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.min.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.validationEngine.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.validationEngine-en.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/editaccount.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/ddaccordion.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/util-functions.js"></script> 
+  <script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/clear-default-text.js"></script>
+	<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/jquery.tabs.pack.js"></script>
+	<script type="text/javascript">
+	<!--	
+		jQuery.noConflict();
+		$(document).ready(function() {
+			inputBg('#userName','username',false);
+			inputBg('#userMailID','emailaddress',false);
+			jQuery.validationEngine.closePrompt('.formError',true);
+		 })
+		
+		function validateForm(formName){
+			if(formName == "frmFindAdmin"){
+				jQuery.validationEngine.closePrompt('#userName');
+				jQuery.validationEngine.closePrompt('#userMailID');
+				jQuery.validationEngine.closePrompt('');
+					
+				getElement('fpusrName').style.borderColor='';
+				
+				var errorMsg=false;				
+				
+				if($.trim(document[lookupIdByTagId("frmFindAdmin",this)][lookupIdByTagId("userName",this)].value) == "" || $.trim(document[lookupIdByTagId("frmFindAdmin",this)][lookupIdByTagId("userName",this)].value) == "User Name") {
+					jQuery.validationEngine.buildPrompt('#userName','Required','error'  );
+					document[lookupIdByTagId("frmFindAdmin",this)][lookupIdByTagId("userName",this)].style.borderColor='#FF0000';
+					errorMsg = true;
+				}
+
+				if($.trim(document[lookupIdByTagId("frmFindAdmin",this)][lookupIdByTagId("userMailID",this)].value) == "" || $.trim(document[lookupIdByTagId("frmFindAdmin",this)][lookupIdByTagId("userMailID",this)].value) == "Email Address") {
+					jQuery.validationEngine.buildPrompt('#userMailID','Required','error'  );
+					document[lookupIdByTagId("frmFindAdmin",this)][lookupIdByTagId("userMailID",this)].style.borderColor='#FF0000';
+					errorMsg = true;
+				}else if($.trim(document[lookupIdByTagId("frmFindAdmin",this)][lookupIdByTagId("userMailID",this)].value) != "" && ($.trim(document[lookupIdByTagId("frmFindAdmin",this)][lookupIdByTagId("userMailID",this)].value) == "Email Address" || $.trim(document[lookupIdByTagId("frmFindAdmin",this)][lookupIdByTagId("userMailID",this)].value) == "test@test.com")) {
+					jQuery.validationEngine.buildPrompt('#userMailID','Enter a valid email address','error'  );
+					document[lookupIdByTagId("frmFindAdmin",this)][lookupIdByTagId("userMailID",this)].style.borderColor='#FF0000';
+					errorMsg = true;
+				}
+				
+				if (errorMsg)
+				{
+					return false;	
+				} else {
+					//document[lookupIdByTagId("frmFindAdmin",this)].submit();
+				}
+			}
+		}
+		
+		function closeBox(){
+			jQuery.validationEngine.closePrompt('#userName');
+			jQuery.validationEngine.closePrompt('');
+
+			document[lookupIdByTagId("frmFindAdmin",this)][lookupIdByTagId("userName",this)].style.borderColor='';
+		}
+
+		function cleanIt(){
+			jQuery.validationEngine.closePrompt('#userName');
+			document[lookupIdByTagId("frmFindAdmin",this)][lookupIdByTagId("userName",this)].style.borderColor='';
+		}
+
+		function formCancel(fromName){
+			document.frmFindAdmin.reset();
+			document.frmFindAdmin.submit();
+		}
+	//-->
+</script>
+
+<!--[if lt IE 7.]>
+<script defer type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/pngfix.js"></script>
+<![endif]-->
+
+
+<div class="spgcontent">
+
+
+
+<div id="myARCleftCol" style="margin:10px 10px 0px 83px; float:left;">
+	<div id="myARCLoginTopLong"></div>
+		<div id="myARCLoginBodyTLong">
+			<h2 class="yourAcct titleMargin">Find Your Administrator</h2>
+			<div id="fpusrName" style="clear:both; display:block;">
+				<form name="frmFindAdmin" id="frmFindAdmin" action="https://myarc.arccorp.com:443https://myarc.arccorp.com/PortalApp/ArcPublicPortal.portal?_nfpb=true&amp;_st=&amp;_windowLabel=FindAdmin_1&amp;FindAdmin_1_actionOverride=%2Fportlets%2FPublic%2FFindAdmin%2FfindAdminSubmit" method="post">
+					<p><label class="myARClabel">Enter your user name and email address</label></p>
+					<p>
+						<input type="text" name="FindAdmin_1{actionForm.userName}" id="userName" class="username" style="width:210px;" onblur="inputBg(this,'username',false);" onkeyup="inputBg(this,'username',false);" onfocus="inputBg(this,'username',true);">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+// lookup by tagId to "real id"
+function lookupIdByTagId(id, tag)
+{
+   var idScope = lookupIdScope(tag,".");
+   return (idScope == "") ? id : idScope + id;
+}
+
+//Non-Legacy lookup method creating a fully qualified scope id
+function lookupIdScope(tag,sep)
+{
+   var val = "";
+   if (sep == null) sep = "";
+   while (tag != null && tag.getAttribute != null) {
+      try {
+         var attrVal = tag.getAttribute("netui:idScope");
+      } catch (e) { /* ignore, in IE6 calling on a table results in an exception */ }
+      if (attrVal != null)
+         val = attrVal + sep + val;
+      tag = tag.parentNode;
+   }
+   return val;
+}
+
+
+// map tagId to "real name"
+if (netui_tagIdNameMap == null)
+   var netui_tagIdNameMap = new Object();
+netui_tagIdNameMap.userName="FindAdmin_1{actionForm.userName}"
+// lookup by tagId to "real name"
+function lookupNameByTagId(id, tag)
+{
+   var idScope = lookupIdScope(tag,"_");
+   if (idScope == "")
+      return netui_tagIdNameMap[id];
+   else
+      return netui_tagIdNameMap[idScope  + "__" + id];
+}
+
+-->
+</script>
+
+					</p>
+					<p>
+						<input type="text" name="FindAdmin_1{actionForm.userMailID}" id="userMailID" class="emailaddress" style="width:210px;" onblur="inputBg(this,'emailaddress',false);" onkeyup="inputBg(this,'emailaddress',false);" onfocus="inputBg(this,'emailaddress',true);">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+netui_tagIdNameMap.userMailID="FindAdmin_1{actionForm.userMailID}"
+-->
+</script>
+
+					</p>
+					<p class="txtyrAcct" style="padding:10px 0px 0px 0px;">
+						<input type="submit" value="Continue" class="b102x24LtBl" onclick="return validateForm('frmFindAdmin');">
+						&nbsp;
+						<a href="https://myarc.arccorp.com:443https://myarc.arccorp.com/PortalApp/ArcPublicPortal.portal?_nfpb=true&amp;_st=&amp;_windowLabel=FindAdmin_1&amp;FindAdmin_1_actionOverride=%2Fportlets%2FPublic%2FFindAdmin%2FfindAdminCancel" onclick="anchor_submit_form('frmFindAdmin','https://myarc.arccorp.com:443https://myarc.arccorp.com/PortalApp/ArcPublicPortal.portal?_nfpb=true&amp;_st=&amp;_windowLabel=FindAdmin_1&amp;FindAdmin_1_actionOverride=%2Fportlets%2FPublic%2FFindAdmin%2FfindAdminCancel');return false;"><input type="button" value="Cancel" class="b102x24LtBl" onclick="closeBox();formCancel('frmFindAdmin');return false;"></a>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+// submit the form from an Anchor or ImageAnchor
+// Search for the form by actionName,
+// Replace the action with the passed in action
+// Submit the form
+function anchor_submit_form(netuiName, newAction)
+{
+  for (var i=0; i<document.forms.length; i++) {
+     if (document.forms[i].id == netuiName) {
+        document.forms[i].method = "POST";
+        document.forms[i].action = newAction;
+        document.forms[i].submit();
+     }
+   }
+}
+-->
+</script>
+
+					</p>
+				</form>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+netui_tagIdNameMap.frmFindAdmin="frmFindAdmin"
+-->
+</script>
+
+			</div>
+		</div>
+	<div id="myARCLoginBotBlLong"></div>
+</div>
+</div>
+</div></div></div></div></div></div></td></tr></tbody></table></div></div></div><div class="loginPortlet"></div><div class="wlp-bighorn-footer">
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/myarc.js"></script>
+<script type="text/javascript" src="https://myarc.arccorp.com/PortalApp/js/default.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1971983-3']);
+  _gaq.push(['_setDomainName', '.arccorp.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		
+<script type="text/javascript">
+var winTools = null;
+function openApplication(var1) {
+	var winName = "popup" + "null";
+	params  = 'width=' + (screen.availWidth-10);
+	params += ', height=' + (screen.availHeight-142);
+	params += ', top=0, left=0, toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes';
+	winTools= window.open(var1, winName, params);
+	if(winTools != null) {
+	    if (window.focus) {winTools.focus()} 
+	}
+}
+function openAMMApplication(var1) {
+	var winName = "popupAMM";
+	params  = 'width=' + (screen.availWidth-10);
+	params += ', height=' + (screen.availHeight-142);
+	params += ', top=0, left=0, toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes';
+	winTools= window.open(var1, winName, params);
+	if(winTools != null) {
+	    if (window.focus) {winTools.focus()} 
+	}
+}
+function showTableauError() {
+	var errorMsg = "";
+	errorMsg += "<p style=\"padding:0px 0px 20px 0px;\">Your account is not active.  Please contact ARC's Customer Support at 855-816-8007.</p><p style=\"text-align:center;\"><input type=\"button\" value=\"OK\" class=\"b102x24\" onclick=\"javascript:getElement(\'tableauDiv\').style.display = \'none\'; \"/></p>";
+	getElement("tableauPop").innerHTML = errorMsg;
+	getElement("tableauDiv").style.display = "";
+	calcPopPosition("tableauDiv");
+	//document[lookupIdByTagId("declineForm",this)].submit();
+	return false;
+}
+
+function submitOcrLoadForm(act, uId, psd, v_Title)
+{
+	document.getElementById("user").value=uId;
+	document.getElementById("pwd").value=psd;
+	params  = 'width=' + (screen.availWidth-10);
+	params += ', height=' + (screen.availHeight-142);
+	params += ', top=0, left=0, toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes';
+	window.open("", v_Title, params);
+	document.ocrLoadForm.target = v_Title;
+	document.ocrLoadForm.action = act;
+	document.ocrLoadForm.submit();
+}
+</script>
+
+<input type="hidden" id="custOrg" value="">
+<div id="tableBottom"></div>
+<div id="footer">
+	<div id="footerCopy">©<script type="text/javascript">document.write(new Date().getFullYear()); </script> Airlines Reporting Corporation (ARC). All rights reserved. <span id="footerLink">
+	<a href="https://www2.arccorp.com/website-terms-of-use/">Terms</a> • <a href="https://www2.arccorp.com/site-privacy-policy/">Privacy</a> •  <a href="https://www2.arccorp.com/pci-data-security-standards/">PCI Standards</a> • <a target="_blank" href="https://arccorp.statusdashboard.com/">Status</a></span></div>
+	<ul class="footer-links-social">
+		<li>
+			<a href="https://www.schellmanco.com/certificate-directory" class="icon-iso_logo"></a>
+		</li>
+		<li>
+			<a href="https://twitter.com/ARCtalk" title="twitter" target="_blank" class="icon-twitter"></a>
+		</li>
+		<li>
+			<a href="https://www.facebook.com/ARCtalk" title="facebook" target="_blank" class="icon-facebook"></a>
+		</li>
+		<li>
+			<a href="https://www.linkedin.com/company/arc" title="LinkedIn" target="_blank" class="icon-linkedin"></a>
+		</li>
+		<li>
+			<a href="https://www.instagram.com/arctalk/" target="_blank" class="icon-instagram"></a>
+		</li>
+	</ul>
+</div>
+
+<div class="popupframe" id="tableauDiv" style="display:none;">
+	<div class="popupframeTL"></div>
+	<div class="popupframeTM"><div class="popuphead">Account Error</div></div>
+	<div class="popupframeTR" onclick="getElement('tableauDiv').style.display='none';"></div>
+	<div class="popupbody1">
+		<div class="popupbody2">
+			<div id="tableauPop"></div>
+		</div>
+	</div>
+	<div style="clear:both;"><div class="popupframeBL"></div><div class="popupframeBM"></div><div class="popupframeBR"></div></div>
+</div>
+
+<form name="ocrLoadForm" action="" method="post">
+	<input type="hidden" id="user" name="user" value="">
+	<input type="hidden" id="pwd" name="pwd" value="">
+</form> 
+
+<script type="text/javascript">
+
+</script>
+<script src="dest/js/main.js?2342363534"></script></div></body></html>
