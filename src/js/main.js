@@ -7,7 +7,7 @@ flexibility(document.documentElement);
 	$(".wlp-bighorn-book").after("<div class='marketingPortlet'></div>");
 
 	// get query for login
-	$.getJSON( "https://arcintgepi.arccorp.com/myarccomp/updated/data.json", function( data ) {
+	$.getJSON( "https://arcintgepi.arccorp.com/myarccomp/updated/data.json?123", function( data ) {
 		
 		//code to sanitize JSON input to prevent injection
 		/* 
@@ -35,7 +35,7 @@ flexibility(document.documentElement);
 		
 		switch (segment) {
 			case "Internal":
-				$(".dashboardPortlet" ).html(data["login"].body);
+				$(".dashboardPortlet" ).html(data["internal"].body);
 				break;
 			
 			case "Carrier":
@@ -43,11 +43,23 @@ flexibility(document.documentElement);
 				break;
 			
 			case "Agency":
-				$(".dashboardPortlet" ).html.after(data["agency"].body);
+				$(".dashboardPortlet" ).html(data["agency"].body);
 				break;
 				
 			case "VTC":
-				$(".dashboardPortlet" ).html.after(data["VTC"].body);
+				$(".dashboardPortlet" ).html(data["VTC"].body);
+				break;
+				
+			case "LEO":
+				$(".dashboardPortlet" ).html(data["LEO"].body);
+				break; 
+				
+			case "Tour Operator":
+				$(".dashboardPortlet" ).html(data["touroperator"].body);
+				break;
+				
+			case "3rd Party": 
+				$(".dashboardPortlet" ).html(data["3rdparty"].body);
 				break;
 				
 			default:
@@ -56,20 +68,32 @@ flexibility(document.documentElement);
 		
 	});
 
+	//search edits
+	$("#search form").attr("action", "https://www2.arccorp.com/search");
+	$("#searchInput").append('<div class="searchIcon"></div>');
+	$(".searchIcon").click(function(){ $("#search form").submit(); });
+	
 	// html DOM edits
 	$("#ARC_Home").parent().parent().addClass("dashboardBG");
+	$('img[alt="Pending Requests"]').parent().parent().parent().addClass("pendingRequests"); 
 	$("#leftCol #myARCleftNavTop div").eq(0).addClass("accountInfo"); 
+	$('#searchInput:after');
 	
 	/* if notifications */
-	if($("#alertBody1").length !== 0 || $(".alertframeLong").length !== 0){
-			var alertHtml = "";
-			$(".wlp-bighorn-header").after("<div class='alertBar'><div class='alertBar-inner'></div></div>");
+	if($("#alertBody1").length !== 0 || $(".alertframeLong").length !== 0) { 
 			
-			if($(".alertframeLong").length !== 0){
+			var alertHtml = "";
+			
+			if($(".alertframeLong").length !== 0 && $(".alertframeLong") !== null){
+				var framelonghtml = $(".alertframeLong").html().trim();
+				if(framelonghtml.length > 0){
+					$(".wlp-bighorn-header").after("<div class='alertBar'><div class='alertBar-inner'></div></div>");
+				}
 				alertHtml = $(".alertframeLong table").find("td").eq(1).html(); 
 				$(".alertframeLong").parent().hide();
 			}
 			else { 
+			  $(".wlp-bighorn-header").after("<div class='alertBar'><div class='alertBar-inner'></div></div>");
 				alertHtml = $("#alertBody1").html(); 
 			}
 			

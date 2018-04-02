@@ -4,9 +4,14 @@
 	}
 }
 
-#Login_1, #ARC_MigrateTool {  
+#Login_1, #ARC_MigrateTool, #ViewAllAdmin_1 {  
 	position: relative; 
 } 
+
+#Login_1 {
+	background: #ffffff;
+	margin-top: 60px;
+}
 
 #ARC_MigrateTool  { 
 	padding-left: 0;
@@ -28,8 +33,11 @@
 
 #ARCGateway_Book .supplementalSection {
 	background: #ffffff;
-	padding: 20px;
-	
+	padding: 20px; 
+}
+
+#ARCGateway_Book #ARC_Login .supplementalSection {
+	background: none; 
 }
 
 .supplementalSection {
@@ -81,9 +89,10 @@
 
 /* edit account */
 
-#ARC_EditAccount {
+#ARC_EditAccount, #ARC_ViewAllAdmin, #MyARC_Registration   {
 	.supplementalSection {
 		background: #ffffff;
+		
 		margin-top: 60px; 
 		position: relative;
 		
@@ -95,6 +104,9 @@
 		
 	}
 	
+	.stylCol {
+		float: none; 
+	}
 	
 	#conthead {
 		float: none;
@@ -110,6 +122,7 @@
 		background: #ffffff;
 		position: relative !important;
 		min-height: 800px;
+		display: block !important;
 	}
 	
 	#spgcontent {
@@ -119,7 +132,7 @@
 		padding: 0 25px !important;
 	}
 	
-	#Breadcrumb_1 {
+	#Breadcrumb_1, #Breadcrumb_2, #Breadcrumb_3, #Breadcrumb_4, #Breadcrumb_5, #Breadcrumb_6  {
 		position: relative;
 	}
 	
@@ -158,6 +171,58 @@
 		clear: both; 
 	}
 	
+}
+
+form , #dashboardSidebar { 
+	.popupframe {
+		background: #ffffff !important;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+		padding-bottom: 16px;
+	}
+	.popupbody1, .popupbody2{
+		border:none;
+		background: none;
+	}
+	
+	.popupbody2 {
+		padding: 25px; 
+	}
+	
+	.popupframeTM {
+		height: auto; 
+		padding:12px;
+		width: 455px;
+		.popuphead {
+			font-size: 26px !important; 
+		}
+	}
+	
+	.popupframeTR {
+		height: 56px;
+    width: 40px;
+		 
+		&:after {
+			font-family: icomoon;
+			content: "\e909";
+			position: absolute;
+			right: 12px;
+			font-size: 20px;
+			top: 12px;
+			color: #333333;
+		}
+		
+	}
+	
+	
+	
+	.popupframeTL, .popupframeTR, .popupframeTM {
+		background: none;
+		border-bottom: 1px solid #eaeaea;
+	}
+	
+	.popupframeBL, .popupframeBM, .popupframeBR {
+		display: none;
+	}
 }
 
 

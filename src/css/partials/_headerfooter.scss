@@ -74,33 +74,43 @@
 }
 
 #searchInput {
+  /*border-bottom: 3px solid #eaeaea;*/
 	position: relative;
 	text-align: right; 
 }
 
 #searchInput input[type="text"] {
-	background: transparent;
+	background: inherit;
 	border: none;
 	position: relative;
-	padding-right: 40px;
+	margin-right: 45px;
 	text-align: right;
 	max-width: 200px !important;
+	z-index: 3;
+}
+
+#searchInput input[type="text"]:hover {
+	cursor: pointer; 
 }
 
 #searchInput input[type="text"]:focus {
 	border: none;
 	border-radius: 0;
 	box-shadow: none;
+	cursor: text;
 }
 
-#searchInput:after {
-font-family: icomoon;
-    content: "\e901";
-    position: absolute;
-    right: 0px;
-    font-size: 28px;
-    top: 8px;
-		color: #333333;
+
+.searchIcon:after {
+	font-family: icomoon !important; 
+	content: "\e901";
+	position: absolute;
+	right: 10px;
+	font-size: 28px;
+	top: 8px;
+	color: #333333;
+	z-index: 2; 
+	cursor: pointer; 
 } 
 
 #topNav {
@@ -139,13 +149,20 @@ font-family: icomoon;
 	display: inline-block !important;
 }
 
-#nav2 div a {
+#nav2 div a, #logBtn {
 	font-size: 16px;
 	font-family: "Source Sans Pro" !important;
 	font-weight: 700 !important;
 	color: #189bb0;
-   margin-left: 20px !important;	
-	 text-transform: uppercase;
+	text-transform: uppercase;
+	margin-left: 20px !important;	
+}
+
+#nav2 div#logBtn {
+	margin-left:20px !important;
+	a {
+		margin-left: 0px !important;
+	}
 }
 
 #nav2 div a:hover {

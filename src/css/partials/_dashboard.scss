@@ -13,6 +13,10 @@
 			color: #ffffff;  
 		}
 		
+		.pendingRequests {
+			margin-right: 50px !important; 
+		}
+		
 		/*.wlp-bighorn-book-content, .wlp-bighorn-page {
 			width: 100%;
 			max-width: 100% !important;
@@ -20,6 +24,7 @@
 		
 		.wlp-bighorn-book-content {
 			background: #f6f6f6 !important; 
+			position: relative;
 		}
 		
 		#alertTopBorder  {
@@ -94,12 +99,6 @@
 			width: 100% !important;
 		} 
 		
-
-		
-		#Form {
-			display: none;
-		}
-		
 		.accountInfo {
 			padding: 20px !important; 
 			background: #189bb0;
@@ -164,8 +163,57 @@
 	
 	#portletCol {
 		position: relative;
+		/*table, td, tr {
+			display: block;
+		}
+		[width="37%"] {
+			width: 100%;
+		}*/
 	}
 	
+	#AMMNotification_1, #AMMNotification_2, #AMMNotification_3, #AMMNotification_4, #AMMNotification_5 {
+		.portletBgBot {
+			width: auto;
+			height: auto;
+			background: none;
+			select {
+				height: auto !important;
+				width: auto !important;
+			}
+		}
+	}
 	
+	.AccordionTitle {
+		.thickbox { 
+			text-transform: capitalize; 
+			font-size: 11px !important;
+		}
+	}
+	
+	#dashboardSidebar .wlp-bighorn-theme-borderless {
+		margin-top: 0;
+	}
 	
 }
+ 
+	@media screen and (max-width: 1169px){
+		#ARC_Home {
+			width:100%;
+
+				td, tr, table {
+					display: block !important;
+				}
+				
+				#dashboardSidebar, #lowerLeftColumn, td[width="37%"] {
+					width: 100%; 
+					margin: 0 !important;
+				}
+				
+				#dashboardSidebar .wlp-bighorn-theme-borderless {
+					margin: 0 11px 0 11px; 
+				}	
+				
+				
+			
+		}
+	}

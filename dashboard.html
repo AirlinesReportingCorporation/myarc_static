@@ -1248,7 +1248,9 @@ netui_tagIdNameMap.Form="Form"
 <div id="alertTopBorder" style="margin-bottom: 10px;">
 	<h1 style="margin-bottom:0px"><img style="padding:10px 0 0 0;" src="https://myarc.arccorp.com/PortalApp/img/MyARC-H1.jpg" /></h1>
 </div>
-</div></div></div></td></tr><tr><td style="padding:0 0 0 2px;" valign="top" width="37%" id="lowerLeftColumn"><div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="Communications_1" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+</div></div></div></td></tr><tr><td style="padding:0 0 0 2px;" valign="top" width="37%" id="lowerLeftColumn"><div></div>
+
+<div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="Communications_1" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
 
 
 
@@ -1262,17 +1264,217 @@ netui_tagIdNameMap.Form="Form"
 <div class="portletBgAll">
 	<div class="portletBgTop">Communications</div>
 	<div class="portletBgMid">
-		<div class="news"><a href="https://www2.arccorp.com/about-us/newsroom/">ARC News</a></div>
-		
-			<div class="news"><a href="https://www2.arccorp.com/articles-trends/agency-communications/travel-agent-communications/">Travel Agent Communication (TAC)</a></div>
+		<div class="news"><a href="https://arcintgepi.arccorp.com/about-us/newsroom/">ARC News</a></div>
 		
 		
-			<div class="news"><a href="https://www2.arccorp.com/articles-trends/carrier-communications/carrier-newsletter/">Carrier Newsletter</a></div>
+			<div class="news"><a href="https://arcintgepi.arccorp.com/articles-trends/carrier-communications/carrier-newsletter/">Carrier Newsletter</a></div>
 			
 	</div>
-	<div class="portletBgBotLess"/>
+	<div class="portletBgBotLess">
 </div>
 </div></div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="AMMNotification_1" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+
+
+<!--  
+<link rel="stylesheet" type="text/css" href="myarcportal.css" media="all" />
+-->
+<form name="refreshSummaryDataForm" id="refreshSummaryDataForm" action="https://intgmyarc.arccorp.com:443/PortalApp/ARCGateway.portal?_nfpb=true&amp;_st=&amp;_windowLabel=AMMNotification_1&amp;AMMNotification_1_actionOverride=%2Fportlets%2FAMMNotification%2FammNotificationAction" method="post">
+<div class="portletBgAll">
+	<div class="portletBgTop" id="summaryCountHeader"><span style="float: right; font-family: Verdana; color: #ffffff; font-weight: normal; line-height:10px;">3/28/2018 11:23 AM</span>Recent Memo Activity </div>
+	<div class="portletBgMid"><div id="countDisplay"> <div id="frequency1"> <span style="float:right; padding-right: 50px;">0</span>  <div class="news">Dispute Posted </div> <span style="float:right; padding-right: 50px;">0</span>  <div class="news">Correspondence Posted </div> <span style="float:right; padding-right: 50px;">0</span>  <div class="news">Payment Pending </div> <span style="float:right; padding-right: 50px;">0</span>  <div class="news">Settled in IAR </div> <span style="float:right; padding-right: 50px;">0</span>  <div class="news">Paid Outside IAR </div></div></div></div>
+	<div class="portletBgBot">
+	<span style="float: right;"><label for="Days" style="font-family: Arial, Verdana, Helvetica, sans-serif;">Days: </label>
+	<select name="Days" id="Days" width="40" onchange="javascript:showMemoCountByFrequency(this)" style="width: 40px;">
+		
+		<option value="1">1</option>
+		
+		<option value="7">7</option>
+		
+		<option value="14">14</option>
+		
+		<option value="21">21</option>
+		
+		<option value="30">30</option>
+		
+	</select></span>
+	<div style="font-family: Arial, Verdana, Helvetica, sans-serif;"><a href="javascript:submitFormOnClick();" id="refreshlink">Refresh</a> | <a href="javascript:openAMMApplication('https://intgamm.arccorp.com/amm')">More</a></div>
+	</div>
+</div>
+                	
+	<script type="text/javascript">
+                	var innerhtmlFor1 = " <div id='frequency1'>";
+                	
+								innerhtmlFor1 = innerhtmlFor1 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor1 = innerhtmlFor1 + " <div class='news'>Dispute Posted </div>";
+						
+								innerhtmlFor1 = innerhtmlFor1 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor1 = innerhtmlFor1 + " <div class='news'>Correspondence Posted </div>";
+						
+								innerhtmlFor1 = innerhtmlFor1 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor1 = innerhtmlFor1 + " <div class='news'>Payment Pending </div>";
+						
+								innerhtmlFor1 = innerhtmlFor1 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor1 = innerhtmlFor1 + " <div class='news'>Settled in IAR </div>";
+						
+								innerhtmlFor1 = innerhtmlFor1 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor1 = innerhtmlFor1 + " <div class='news'>Paid Outside IAR </div>";
+						 
+                	innerhtmlFor1 = innerhtmlFor1 + "</div>";
+	</script>
+                	
+	<script type="text/javascript">
+                	var innerhtmlFor7 = " <div id='frequency7'>";
+                	
+								innerhtmlFor7 = innerhtmlFor7 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor7 = innerhtmlFor7 + " <div class='news'>Dispute Posted </div>";
+						
+								innerhtmlFor7 = innerhtmlFor7 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor7 = innerhtmlFor7 + " <div class='news'>Correspondence Posted </div>";
+						
+								innerhtmlFor7 = innerhtmlFor7 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor7 = innerhtmlFor7 + " <div class='news'>Payment Pending </div>";
+						
+								innerhtmlFor7 = innerhtmlFor7 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor7 = innerhtmlFor7 + " <div class='news'>Settled in IAR </div>";
+						
+								innerhtmlFor7 = innerhtmlFor7 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor7 = innerhtmlFor7 + " <div class='news'>Paid Outside IAR </div>";
+						 
+                	innerhtmlFor7 = innerhtmlFor7 + "</div>";
+	</script>
+                	
+	<script type="text/javascript">
+                	var innerhtmlFor14 = " <div id='frequency14'>";
+                	
+								innerhtmlFor14 = innerhtmlFor14 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor14 = innerhtmlFor14 + " <div class='news'>Dispute Posted </div>";
+						
+								innerhtmlFor14 = innerhtmlFor14 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor14 = innerhtmlFor14 + " <div class='news'>Correspondence Posted </div>";
+						
+								innerhtmlFor14 = innerhtmlFor14 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor14 = innerhtmlFor14 + " <div class='news'>Payment Pending </div>";
+						
+								innerhtmlFor14 = innerhtmlFor14 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor14 = innerhtmlFor14 + " <div class='news'>Settled in IAR </div>";
+						
+								innerhtmlFor14 = innerhtmlFor14 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor14 = innerhtmlFor14 + " <div class='news'>Paid Outside IAR </div>";
+						 
+                	innerhtmlFor14 = innerhtmlFor14 + "</div>";
+	</script>
+                	
+	<script type="text/javascript">
+                	var innerhtmlFor21 = " <div id='frequency21'>";
+                	
+								innerhtmlFor21 = innerhtmlFor21 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor21 = innerhtmlFor21 + " <div class='news'>Dispute Posted </div>";
+						
+								innerhtmlFor21 = innerhtmlFor21 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor21 = innerhtmlFor21 + " <div class='news'>Correspondence Posted </div>";
+						
+								innerhtmlFor21 = innerhtmlFor21 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor21 = innerhtmlFor21 + " <div class='news'>Payment Pending </div>";
+						
+								innerhtmlFor21 = innerhtmlFor21 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor21 = innerhtmlFor21 + " <div class='news'>Settled in IAR </div>";
+						
+								innerhtmlFor21 = innerhtmlFor21 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor21 = innerhtmlFor21 + " <div class='news'>Paid Outside IAR </div>";
+						 
+                	innerhtmlFor21 = innerhtmlFor21 + "</div>";
+	</script>
+                	
+	<script type="text/javascript">
+                	var innerhtmlFor30 = " <div id='frequency30'>";
+                	
+								innerhtmlFor30 = innerhtmlFor30 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor30 = innerhtmlFor30 + " <div class='news'>Dispute Posted </div>";
+						                		    	
+								innerhtmlFor30 = innerhtmlFor30 + " <span style='float:right; padding-right: 50px;'><a href=\"javascript:openAMMApplication('https://intgamm.arccorp.com/amm?summaryId=709036160')\">1</a></span> ";
+								
+                        		innerhtmlFor30 = innerhtmlFor30 + " <div class='news'>Correspondence Posted </div>";
+						                		    	
+								innerhtmlFor30 = innerhtmlFor30 + " <span style='float:right; padding-right: 50px;'><a href=\"javascript:openAMMApplication('https://intgamm.arccorp.com/amm?summaryId=709036162')\">1</a></span> ";
+								
+                        		innerhtmlFor30 = innerhtmlFor30 + " <div class='news'>Payment Pending </div>";
+						
+								innerhtmlFor30 = innerhtmlFor30 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor30 = innerhtmlFor30 + " <div class='news'>Settled in IAR </div>";
+						
+								innerhtmlFor30 = innerhtmlFor30 + " <span style='float:right; padding-right: 50px;'>0</span> ";
+                		    	
+                        		innerhtmlFor30 = innerhtmlFor30 + " <div class='news'>Paid Outside IAR </div>";
+						 
+                	innerhtmlFor30 = innerhtmlFor30 + "</div>";
+	</script>
+                	
+	<script type="text/javascript">
+			document.getElementById("summaryCountHeader").innerHTML= "<Span style='float: right; font-family: Verdana; color: #ffffff; font-weight: normal; line-height:10px;'>3/28/2018 11:23 AM</Span>" + document.getElementById("summaryCountHeader").innerHTML ;
+			daysDropDown = document.getElementById("Days");
+			document.getElementById("countDisplay").innerHTML=eval("innerhtmlFor"+daysDropDown.options[daysDropDown.selectedIndex].value);	
+			
+			function showMemoCountByFrequency(selectObject){
+				document.getElementById("countDisplay").innerHTML=eval("innerhtmlFor"+daysDropDown.options[daysDropDown.selectedIndex].value);	
+			}
+			function submitFormOnClick(){
+				refreshLink = document.getElementById("refreshlink");
+				//refreshLink.innerHTML = "Loading...";
+				refreshLink.disabled = true;
+				document.forms.refreshSummaryDataForm.submit();
+			}
+	</script>
+    </form>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+netui_tagIdNameMap.refreshSummaryDataForm="refreshSummaryDataForm"
+-->
+</script>
+
+
+</div></div></div><div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="MarketPlace_3" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+
+
+	<div></div>
+</div></div></div></div>
+
+<div class="wlp-bighorn-theme wlp-bighorn-theme-borderless"><div id="AMMNotification_1" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
 
 
 
@@ -1588,7 +1790,7 @@ function submitOcrLoadForm(act, uId, psd, v_Title)
 openApplication('https://myarc.arccorp.com/asp/index.html');
 </script>
 
-<script src="dest/js/main.js?4534564553s"></script>
+<script src="dest/js/main.js?453453453453s"></script>
 </script>
 
 </div></body></html>

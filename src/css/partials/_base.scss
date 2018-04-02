@@ -94,11 +94,11 @@ h6 {
 	background: transparent !important;
 	max-width: 1170px !important; 
 	width:100%;
-	z-index: 10; 
 	min-height: 500px; 
+	    position: relative;
 }
 
-#Breadcrumb_1, #Breadcrumb_2 {
+#Breadcrumb_1, #Breadcrumb_2, #Breadcrumb_3, #Breadcrumb_4, #Breadcrumb_5, #Breadcrumb_6 {
 	#breadcrumb {
 		margin: 0;
 		height: auto;
@@ -164,7 +164,6 @@ h6 {
 @media screen and (max-width: 1169px) {
 	.wlp-bighorn-book-content {
 		width:100% !important;
-		padding: 15px;
 	}
 }
 
