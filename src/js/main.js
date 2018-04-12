@@ -61,6 +61,10 @@ flexibility(document.documentElement);
 			case "3rd Party": 
 				$(".dashboardPortlet" ).html(data["3rdparty"].body);
 				break;
+			
+			case "Airport":
+				$(".dashboardPortlet" ).html(data["airport"].body);
+				break;
 				
 			default:
 				break;
@@ -79,18 +83,20 @@ flexibility(document.documentElement);
 	$("#leftCol #myARCleftNavTop div").eq(0).addClass("accountInfo"); 
 	$('#searchInput:after');
 	
+	
+	
 	/* if notifications */
 	if($("#alertBody1").length !== 0 || $(".alertframeLong").length !== 0) { 
 			
 			var alertHtml = "";
-			
+			$(".alertframeLong").parent().addClass("alertParent");
 			if($(".alertframeLong").length !== 0 && $(".alertframeLong") !== null){
 				var framelonghtml = $(".alertframeLong").html().trim();
 				if(framelonghtml.length > 0){
 					$(".wlp-bighorn-header").after("<div class='alertBar'><div class='alertBar-inner'></div></div>");
 				}
 				alertHtml = $(".alertframeLong table").find("td").eq(1).html(); 
-				$(".alertframeLong").parent().hide();
+				
 			}
 			else { 
 			  $(".wlp-bighorn-header").after("<div class='alertBar'><div class='alertBar-inner'></div></div>");
@@ -111,5 +117,53 @@ flexibility(document.documentElement);
 	$(".mobile-icon").click(function(){
 		$("#searchNav").toggle();
 	});
+	
+	/* add username and password placeholders with javascript */
+	
+	$("input").each(function(){
+		var name = $(this).attr("name");
+		var id = $(this).attr("id");
+		
+		console.log(name);
+		console.log(id);
+		
+		if(name == "user" || id == "usrName" || id == "userName"){
+			$(this).attr("placeholder", "Username");
+		}
+		else if(name == "password" || id == "usrPswd"){
+			$(this).attr("placeholder", "Password");
+		}
+		else if( id == "userMailID" ) {
+			$(this).attr("placeholder", "Email Address");
+		}
+	});
+	
+		/* temporary development css cache reload 
+	=================================================================
+	
+
+	$('link[href="https://arcintgepi.arccorp.com/globalassets/myarc/main.css"]')[0].disabled=true;
+	$('link[href="https://arcintgepi.arccorp.com/globalassets/myarc/main.css"]')[0].remove();
+
+	function addCss(fileName) {
+		 $('head').append('<link rel="stylesheet" type="text/css" href="' + fileName + '">');
+	}
+
+	addCss("https://arcintgepi.arccorp.com/globalassets/myarc/main.css?" + new Date().getTime());
+
+	
+	=================================================================
+	*/ 
+	
 
 })();
+
+var posUSNorig = posUSN;
+
+function posUSN(mObj,pObj){
+ var elem = $("#" + mObj);
+ var temp = $("#" + pObj);
+ elem.css("left", temp.position().left + temp.width());
+ elem.css("top", temp.position().top);
+ elem.css("visibility", 'visible');
+}

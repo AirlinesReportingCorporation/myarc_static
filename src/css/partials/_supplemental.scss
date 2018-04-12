@@ -4,6 +4,21 @@
 	}
 }
 
+#ARC_ForgotPassword {
+	#myARCSQABodyB {
+		max-width: 452px;
+		width: 100%;
+		padding: 20px; 
+		border: none;
+	}
+	#myARCSQABot {
+		display: none;
+	}
+	.myarcStylLeftCol { 
+		background: #ffffff;
+	}
+}
+
 #Login_1, #ARC_MigrateTool, #ViewAllAdmin_1 {  
 	position: relative; 
 } 
@@ -11,6 +26,7 @@
 #Login_1 {
 	background: #ffffff;
 	margin-top: 60px;
+	padding-bottom: 20px;
 }
 
 #ARC_MigrateTool  { 
@@ -57,8 +73,8 @@
 		input[type="button"], input[type="submit"], input[type="button"]:hover, input[type="submit"]:hover{
 			background: #189bb0 !important;
 			background-image: none;
-			padding: 10px;
-			color: #ffffff;
+			padding: 10px !important;
+			color: #ffffff !important;
 			text-transform: uppercase;
 			height: auto !important;
 			width: auto !important; 
@@ -66,7 +82,7 @@
 			font-size: 14px;
 			font-family: "Source Sans Pro", "Roboto Slab", arial, sans-serif;
 			font-weight: 600;
-			border: none;
+			border: none !important; 
 			border-radius: 4px;
 			margin-right: 7px;
 	}
@@ -76,8 +92,9 @@
 	display: none !important;
 } 
 
-#myARCleftCol #myARCLoginBodyTLong, #myARCLoginBodyT, #myARCLoginBodyB, #myARCLoginBodyTLong{ 
+#myARCleftCol #myARCLoginBodyTLong, #myARCLoginBodyT, #myARCLoginBodyB, #myARCLoginBodyTLong, #myARCSQABodyB{ 
 	background:#ffffff !important;
+	border: none; 
 }
 
 #myARCleftCol #myARCLoginBodyTLong h2.yourAcct{
@@ -88,6 +105,10 @@
 } 
 
 /* edit account */
+
+#ARC_EditAccount #dashboardSidebar .supplementalSection {
+	margin-bottom: 0;
+}
 
 #ARC_EditAccount, #ARC_ViewAllAdmin, #MyARC_Registration   {
 	.supplementalSection {
@@ -166,14 +187,15 @@
 	
 	.csubDiv {
 		width: 100%; 
-	}
+	} 
 	.categoryitems.csubDiv #divMiddle + p {     
 		clear: both; 
 	}
 	
 }
 
-form , #dashboardSidebar { 
+form , #dashboardSidebar {
+
 	.popupframe {
 		background: #ffffff !important;
 		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -225,4 +247,41 @@ form , #dashboardSidebar {
 	}
 }
 
+#dashboardSidebar{
+	.supplementalSection {
+		margin-top: 60px;
+		margin-bottom: 25px;
+		padding: 20px;   
+	}
+}
 
+#portletInstance_2 {
+	 background: #ffffff;
+   padding: 20px;
+	
+}
+
+#ARC_ForgotPassword {
+	#alertBox + div {
+		margin: 0 !important; 
+	}
+	h2.yourAcct {
+		color: #666666;
+	}
+	div {
+		color: #666666 !important;
+	}
+}  
+
+.heading.arcH1 {
+	color: #189bb0; 
+}
+
+#SelfRegistration_1 .wlp-bighorn-window-content {
+	padding: 40px; 
+}
+
+.alertParent {
+	float: none !important;
+	margin: none !important; 
+}

@@ -9,6 +9,12 @@
 		float: none !important;
 	}
 	
+	#dashboardSidebar .supplementalSection { 
+		margin-top: 0; 
+		padding: 60px 0;
+		background: transparent;
+	}
+	
 	#myARCLoginTop, #myARCLoginBot {
 		display: none;
 	}
@@ -37,6 +43,8 @@
 		margin-right: 7px;
 		width:100%;
 	}
+	
+	
 	 
 	#myARCleftCol input[type="button"].b102x24LtBl:hover, #myARCleftCol input[type="submit"].b102x24LtBl:hover, .btn:hover {
 		backgrround: #20b8d1;
@@ -138,6 +146,7 @@ form input[type="password"], form input[type="text"], form select {
 		width: 100% !important;
 		max-width: 350px !important;
 		height: 38px !important; 
+		box-shadow: none;
 }
 
 form input[type="password"]:focus, form input[type="text"]:focus, form select:focus { 

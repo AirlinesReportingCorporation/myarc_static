@@ -75,6 +75,10 @@ h6 {
 		margin-right: 7px;
 		width:100%;
 	}
+	
+input::-ms-clear, input::-ms-reveal {
+	display: none;
+} 
 
 .wlp-bighorn-layout-grid {
 	margin-bottom: 0;
@@ -104,6 +108,7 @@ h6 {
 		height: auto;
 		a {
 			font-size: inherit; 
+			color: #189bb0;
 		}
 	}
 }
@@ -111,11 +116,7 @@ h6 {
 .wlp-bighorn-book-content .wlp-bighorn-theme-borderless .wlp-bighorn-window {
 	margin-left: 0;
 	margin-right: 0;
-}
-
-.spgcontent {
-	padding: 60px 0;
-}
+} 
 
 /* accordions */
 
