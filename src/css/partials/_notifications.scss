@@ -4,8 +4,8 @@
 	}
 }
 
-#Alerts_1, .alertframeLong {
-	display: none;
+#Alerts_1, .alertframeLong, #alertAcctLocked {
+	display: none !important;
 }
 
 .alertBar {

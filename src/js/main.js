@@ -18,10 +18,11 @@ flexibility(document.documentElement);
 		if($("#frmMyARCLogin").attr("name") == "frmMyARCLogin") {
 			$(".marketingPortlet" ).html(data["login"].body);
 			$("#myARCrightCol").html(data["login"].ads);
+			$("#myARCrightCol").css("display", "inline-block");
 		}
 		
 		//grab hidden input val() for switch conditional
-		console.log($("#custOrg").val());
+		console.log("Segment:" + $("#custOrg").val());
 		
 		var segment = $("#custOrg").val();
 		var sideBar = $(".wlp-bighorn-layout tr td").eq(0);
@@ -64,6 +65,14 @@ flexibility(document.documentElement);
 			
 			case "Airport":
 				$(".dashboardPortlet" ).html(data["airport"].body);
+				break;
+				
+			case "CTD":
+				$(".dashboardPortlet" ).html(data["ctd"].body);
+				break;
+				
+			case "System Provider":
+				$(".dashboardPortlet" ).html(data["systemprovider"].body);
 				break;
 				
 			default:
@@ -123,9 +132,6 @@ flexibility(document.documentElement);
 	$("input").each(function(){
 		var name = $(this).attr("name");
 		var id = $(this).attr("id");
-		
-		console.log(name);
-		console.log(id);
 		
 		if(name == "user" || id == "usrName" || id == "userName"){
 			$(this).attr("placeholder", "Username");

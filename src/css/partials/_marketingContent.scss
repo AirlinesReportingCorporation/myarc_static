@@ -1,12 +1,33 @@
 .marketingContainer {
-
+	.btn {
+		position: absolute;
+		bottom: 0;
+	}
+	.marketingCol {
+		margin-bottom:60px; 
+	}
+	.container {
+		padding: 0;
+	}
+	.alert-block {
+		border-bottom: 1px solid #dadada;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+	h3 {
+		font-size: 1.8rem !important;
+	}
+	img {
+		margin-bottom: 20px;
+		width: 100%;
+	}
 }
 
 .dashboardPortlet {
-	h2 {
+	h2, h3 {
 		margin-top: 0;
 	}
-}
+} 
 
 .loginPortlet2 {
 	padding: 60px 0; 

@@ -68,9 +68,9 @@
 #LeftPane_2 {
 	margin-right: 15px;	
 }
-
+ 
 .wlp-bighorn-page {
-		input[type="button"], input[type="submit"], input[type="button"]:hover, input[type="submit"]:hover{
+		input[type="button"], input[type="submit"], input[type="button"].b102x24LtBl, input[type="submit"].b102x24LtBl{
 			background: #189bb0 !important;
 			background-image: none;
 			padding: 10px !important;
@@ -85,6 +85,11 @@
 			border: none !important; 
 			border-radius: 4px;
 			margin-right: 7px;
+			min-width: 155px;
+	}
+	input[type="submit"]:hover , input[type="button"]:hover, input[type="button"].b102x24LtBl:hover, input[type="submit"].b102x24LtBl:hover{
+		background: #20b8d1 !important;  
+		text-decoration: none; 
 	}
 }
 
@@ -100,14 +105,29 @@
 #myARCleftCol #myARCLoginBodyTLong h2.yourAcct{
 	color:#555555 !important;
 }
+
 #MyARC_FindAdmin #myARCleftCol, #ARC_ForgotPassword #myARCleftCol, #MyARC_ForgotUserName #myARCleftCol { 
-	margin: 10px 10px 50px 83px !important;
+	margin: 0 !important;
+	
 } 
 
-/* edit account */
+#MyARC_FindAdmin, #ARC_ForgotPassword, #MyARC_ForgotUserName {
+	#dashboardSidebar .supplementalSection { 
+		padding: 0px; 
+	}
+}
 
-#ARC_EditAccount #dashboardSidebar .supplementalSection {
-	margin-bottom: 0;
+/* edit account */
+#ARC_EditAccount {
+	#conthead {
+		padding-left: 25px !important;
+	}
+}
+
+#ARC_EditAccount, #ARC_ViewAllAdmin {
+	#dashboardSidebar .supplementalSection {
+		margin-bottom: 0;
+	}
 }
 
 #ARC_EditAccount, #ARC_ViewAllAdmin, #MyARC_Registration   {
@@ -160,6 +180,8 @@
 	#breadcrumb {
 		height: auto; 
 		margin: 0 0 0 15px !important;
+		font-weight: 700;
+		font-size: 14px !important; 
 	}
 	
 	label {
@@ -194,7 +216,7 @@
 	
 }
 
-form , #dashboardSidebar {
+form , #dashboardSidebar, .wlp-bighorn-book-content { 
 
 	.popupframe {
 		background: #ffffff !important;
@@ -284,4 +306,14 @@ form , #dashboardSidebar {
 .alertParent {
 	float: none !important;
 	margin: none !important; 
+}
+
+#ARC_ViewAllAdmin{
+	table.datatable thead th, .tblAdmin a {
+		background: #189bb0;
+		color: #ffffff !important; 
+	}
+	table.datatable td, table.datatable th {
+		border-bottom: 1px solid #dadada; 
+	}
 }
