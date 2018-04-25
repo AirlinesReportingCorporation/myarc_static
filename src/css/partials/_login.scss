@@ -12,12 +12,11 @@
 	}
 	
 	#dashboardSidebar .supplementalSection { 
-		margin-top: 0; 
-		
+		margin: 0; 
+		padding: 0;
 		background: transparent;
 	}
-	
-	
+	 
 	#myARCLoginTop, #myARCLoginBot {
 		display: none;
 	}
@@ -194,7 +193,10 @@ form input[type="password"]:focus, form input[type="text"]:focus, form select:fo
 }
 
 .formError .formErrorContent {
-	display: none;
+	border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+	margin-left: 5px;
+	padding: 0 5px !important;
 }
 
 @media screen and (max-width: 1187px){

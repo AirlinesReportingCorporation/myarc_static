@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "node_modules/.bin/babel",
+		"uncompressed": "concurrently \"node-sass src/css/main.scss -wo dest/css/ \"  \"babel src/js/main.js --watch --out-file dest/js/main.js \" ",
     "start": "concurrently \"node-sass src/css/main.scss -wo dest/css/ --output-style compressed\"  \"babel src/js/main.js --watch --out-file dest/js/main.js \" "
   },
   "repository": {
