@@ -1,20 +1,48 @@
 .marketingContainer {
 	.btn {
+		color: #ffffff;
 		position: absolute;
 		bottom: 0;
+		text-align: center;
+		padding: 10px 20px;
+		&:hover {
+			color: #ffffff;
+		}
 	}
 	.marketingCol {
 		margin-bottom:60px; 
 	}
+	.marketingTable {
+		background: #FFFFFF;
+		td {
+			border: 1px solid #666666;
+			vertical-align: middle;
+			text-align: center;
+			padding: 5px 10px;
+			p {
+				margin: 0;
+			}
+		}
+	}	
 	.container {
 		padding: 0;
 	}
 	.alert-block {
-		border-bottom: 1px solid #dadada;
 		padding-bottom: 20px;
 		margin-bottom: 20px;
 	}
-	h3 {
+	.row {
+		margin-bottom: 40px;
+	}
+	.row-icon {
+		text-align: center;
+		img {
+			max-width: 150px;
+			display: block;
+			margin: 0 auto 10px auto;
+		}
+	}
+	h2, h3 {
 		font-size: 1.8rem !important;
 	}
 	img {
@@ -39,5 +67,28 @@
 	h1 {
 		margin-bottom: 2rem !important
 		
+	}
+	h4 {
+		color: #ffffff;
+		font-style: normal;
+	}
+	small {
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	p {
+		color: #ffffff;
+	}
+	.btn  {
+		width: auto !important; 
+	}
+	li {
+		color: #ffffff;
+		list-style: inherit;
+	}
+	ul {
+		list-style: inherit;
 	}
 }

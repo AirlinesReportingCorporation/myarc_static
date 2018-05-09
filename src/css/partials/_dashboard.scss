@@ -146,6 +146,55 @@
 	}
 		
 }
+
+#myARCleftNavTop{
+	.AccordionContainer {
+		a, a span {
+			color: #189bb0 !important;
+		}
+		a:hover, a span:hover {
+			color: #20b8d1 !important;
+			text-decoration: none;
+		}
+		.txtleftSection {
+			padding: 5px 0;
+			margin-bottom: 0;
+			span {
+				line-height: 16px !important;
+			}
+			
+			img[src="/PortalApp/img/my_arc_lock.gif"], img[src="/PortalApp/img/dotNoLock.gif"] {
+				display: inline-block;
+				max-width: 10%;
+			}
+			a {
+				display: inline-block;
+				max-width: 90%;
+				vertical-align: middle;
+				padding: 0 0 0 10px;
+			}
+		}
+	}
+	
+	.accordSec {
+		width: auto;
+	}
+	
+	.AccordionTitle {
+		.thickbox { 
+			text-transform: capitalize; 
+			font-size: 11px !important;
+		}
+		div {
+			color: #189bb0 !important;
+		}
+	}
+	
+	.accountInfo a {
+		padding-left: 0;
+	}
+	
+}
 	 
 #ARC_Home {
 	position:relative; 
@@ -190,43 +239,8 @@
 		}
 	}
 	
-	.AccordionTitle {
-		.thickbox { 
-			text-transform: capitalize; 
-			font-size: 11px !important;
-		}
-		div {
-			color: #189bb0 !important;
-		}
-	}
+
 	
-	.AccordionContainer {
-		a, a span {
-			color: #189bb0 !important;
-		}
-		a:hover, a span:hover {
-			color: #20b8d1 !important;
-			text-decoration: none;
-		}
-		.txtleftSection {
-			padding: 5px 0;
-			margin-bottom: 0;
-			span {
-				line-height: 16px !important;
-			}
-			
-			img[src="/PortalApp/img/my_arc_lock.gif"], img[src="/PortalApp/img/dotNoLock.gif"] {
-				display: inline-block;
-				max-width: 10%;
-			}
-			a {
-				display: inline-block;
-				max-width: 90%;
-				vertical-align: middle;
-				padding: 0 0 0 10px;
-			}
-		}
-	}
 	
 	#leftCol a:hover, #leftCol a:visited:hover, #rightCol a:hover, #rightCol a:visited:hover {
 		text-decoration: none;

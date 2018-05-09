@@ -317,3 +317,30 @@ form , #dashboardSidebar, .wlp-bighorn-book-content {
 		border-bottom: 1px solid #dadada; 
 	}
 }
+  
+#ARC_Login {
+	.wellWelcomePage{
+		left: auto;
+		width: auto;
+		border: none;
+		box-shadow: none;
+		margin-top: 0;
+		padding: 0 20px;
+		.bodyText {
+			height: auto;
+		}
+		input[type="submit"] {
+			margin-left: 0 !important; 
+		}
+		.arcH1 {
+			height: auto;
+		}
+	}
+}
+ /*NK - fixing My ARC Terms of Use Update page*/
+#Login_1 .wlp-bighorn-window-content{
+	padding:50px;
+}
+#Login_1 .wlp-bighorn-window-content #spgcontent{
+width:auto;
+}
