@@ -2059,17 +2059,56 @@ var jQ = $.noConflict(true);
 
 	section.find("table").append("<tr><td colspan='2' class='dashboardPortlet'></td><tr/>");
 
-	console.log("test");
-
 	function setSegment(data) {
 
 		if (jQ("#frmMyARCLogin").attr("name") == "frmMyARCLogin") {
-			jQ(".marketingPortlet").html(data["login"].body);
+			//jQ(".marketingPortlet" ).html(data["login"].body);
 			jQ("#myARCrightCol").html(data["login"].ads);
 			jQ("#myARCrightCol").css("display", "inline-block");
+
+			jQ.ajax({
+				url: "https://us-central1-myarc-4b29c.cloudfunctions.net/twitterAPI",
+				contentType: 'application/json; charset=utf-8',
+				dataType: 'json',
+				type: 'GET'
+			}).done(function (data) {
+				console.log("=== Twitter Content Loaded ===");
+
+				var twitterCode = '<div class="marketingContainer loginPortlet2 animated fadeIn" style=" color: #fff; background: #fff; background-size: cover; position:relative; z-index:1;"><div class="container"><div class="row">';
+
+				var tweetObjs = [];
+
+				for (var i = 0; i < data.length; i++) {
+					if (data[i].entities.media != undefined) {
+						var imageWidth = data[i].entities.media[0]["sizes"]["large"]["w"];
+						var imageHeight = data[i].entities.media[0].sizes.large.h;
+						if (imageWidth == 1250 && imageHeight == 625 || imageWidth == 650 && imageHeight == 325 || imageWidth == 600 && imageHeight == 300) {
+							tweetObjs.push(data[i]);
+						}
+					}
+				}
+
+				console.log(tweetObjs);
+
+				for (var i = 0; i < 3; i++) {
+					var arcURL = tweetObjs[i].entities.urls[0].expanded_url;
+					var imageURL = tweetObjs[i].entities.media[0].media_url_https;
+					var tweetURL = tweetObjs[i].entities.urls[0].url;
+					var tweetImageURL = tweetObjs[i].entities.media[0].url;
+					var text = tweetObjs[i].full_text.replace(tweetImageURL, "").replace(tweetURL, '<a target="_blank" + href="' + tweetURL + '">' + tweetURL + '</a>');
+
+					twitterCode += '<div class="col-md-4"><div class="marketingCol">' + '<a href="' + arcURL + '" target="_blank">' + '<img src="' + imageURL + '"></a> ' + '<p>' + text + '</p>' + '<a href="' + arcURL + '" target="_blank" class="btn btn-success my-2 my-sm-0">Learn More</a>' + '</div></div>';
+				}
+
+				twitterCode += "</div></div></div>";
+
+				jQ(".marketingPortlet").html(twitterCode);
+			});
 		}
 
-		console.log("Segment:" + jQ("#custOrg").val());
+		if (segment != "" || segment != " ") {
+			console.log("=== Segment: " + jQ("#custOrg").val() + " ===");
+		}
 
 		var segment = jQ("#custOrg").val();
 
@@ -2087,7 +2126,7 @@ var jQ = $.noConflict(true);
 				break;
 
 			case "VTC":
-				jQ(".dashboardPortlet").html(data["VTC"].body);
+				jQ(".dashboardPortlet").html(data["agency"].body);
 				break;
 
 			case "LEO":
@@ -2121,13 +2160,27 @@ var jQ = $.noConflict(true);
 
 	jQ.ajaxSetup({ cache: false });
 
+	var marketingContentUrl = 'https://us-central1-myarc-4b29c.cloudfunctions.net/marketingContent?';
+	var host = window.location.hostname;
+	console.log("=== Hostname: " + host + " ===");
+
+	if (host.indexOf("intg") > -1 || host.indexOf("stge") > -1) {
+		console.log("=== INTG or STGE environment detected ===");
+		marketingContentUrl = 'https://arcintgepi.arccorp.com/myarccomp/updated/data.json?' + Date.now();
+	} else if (host.indexOf("uat") > -1) {
+		console.log("=== UAT environement dectected ===");
+		marketingContentUrl = 'https://us-central1-uatmyarc.cloudfunctions.net/marketingContent?' + Date.now();
+	}
+
+	console.log("=== JSON: " + marketingContentUrl + " ===");
+
 	jQ.ajax({
-		url: 'https://us-central1-myarc-4b29c.cloudfunctions.net/marketingContent?' + Math.floor(Math.random() * 100000000000),
+		url: marketingContentUrl + Math.floor(Math.random() * 100000000000),
 		contentType: 'application/json; charset=utf-8',
 		dataType: 'json',
 		type: 'GET'
 	}).done(function (data) {
-		console.log("done");
+		console.log("=== Marketing Content Loaded ===");
 		setSegment(data);
 	});
 
@@ -2198,19 +2251,6 @@ var jQ = $.noConflict(true);
 			jQ(this).attr("placeholder", "Email Address");
 		}
 	});
-
-	/* temporary development css cache reload 
- =================================================================
- 
- 	jQ('link[href="https://arcintgepi.arccorp.com/globalassets/myarc/main.css"]')[0].disabled=true;
- jQ('link[href="https://arcintgepi.arccorp.com/globalassets/myarc/main.css"]')[0].remove();
- 	function addCss(fileName) {
-  jQ('head').append('<link rel="stylesheet" type="text/css" href="' + fileName + '">');
- }
- 	addCss("https://arcintgepi.arccorp.com/globalassets/myarc/main.css?" + new Date().getTime());
- 	
- =================================================================
- */
 })();
 
 var posUSNorig = posUSN;
