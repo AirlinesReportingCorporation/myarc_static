@@ -1,11 +1,13 @@
 /*! jQuery v3.3.1 | (c) JS Foundation and other contributors | jquery.org/license */
 !function (e, t) {
 	"use strict";
+
 	"object" == typeof module && "object" == typeof module.exports ? module.exports = e.document ? t(e, !0) : function (e) {
 		if (!e.document) throw new Error("jQuery requires a window with a document");return t(e);
 	} : t(e);
 }("undefined" != typeof window ? window : this, function (e, t) {
 	"use strict";
+
 	var n = [],
 	    r = e.document,
 	    i = Object.getPrototypeOf,
@@ -2048,7 +2050,7 @@ var jQ = $.noConflict(true);
 		});
 	});
 
-	// add tag to dom for html 
+	// add tag to dom for html
 	jQ(".wlp-bighorn-book").after("<div class='marketingPortlet'></div>");
 
 	var sideBar = jQ(".wlp-bighorn-layout tr td").eq(0);
@@ -2082,7 +2084,7 @@ var jQ = $.noConflict(true);
 					if (data[i].entities.media != undefined) {
 						var imageWidth = data[i].entities.media[0]["sizes"]["large"]["w"];
 						var imageHeight = data[i].entities.media[0].sizes.large.h;
-						if (imageWidth == 1250 && imageHeight == 625 || imageWidth == 650 && imageHeight == 325 || imageWidth == 600 && imageHeight == 300) {
+						if (imageWidth == 1250 && imageHeight == 625 || imageWidth == 650 && imageHeight == 325 || imageWidth == 600 && imageHeight == 300 || imageHeight == 417 && imageWidth == 833) {
 							tweetObjs.push(data[i]);
 						}
 					}
@@ -2091,11 +2093,22 @@ var jQ = $.noConflict(true);
 				console.log(tweetObjs);
 
 				for (var i = 0; i < 3; i++) {
-					var arcURL = tweetObjs[i].entities.urls[0].expanded_url;
 					var imageURL = tweetObjs[i].entities.media[0].media_url_https;
-					var tweetURL = tweetObjs[i].entities.urls[0].url;
+
 					var tweetImageURL = tweetObjs[i].entities.media[0].url;
+					var arcURL = tweetImageURL;
+					var tweetURL = tweetImageURL;
 					var text = tweetObjs[i].full_text.replace(tweetImageURL, "").replace(tweetURL, '<a target="_blank" + href="' + tweetURL + '">' + tweetURL + '</a>');
+
+					if (tweetObjs[i].entities.urls.length > 0) {
+						if (tweetObjs[i].entities.urls[0].hasOwnProperty("expanded_url")) {
+							arcURL = tweetObjs[i].entities.urls[0].expanded_url;
+						}
+
+						if (tweetObjs[i].entities.urls[0].hasOwnProperty("url")) {
+							tweetURL = tweetObjs[i].entities.urls[0].url;
+						}
+					}
 
 					twitterCode += '<div class="col-md-4"><div class="marketingCol">' + '<a href="' + arcURL + '" target="_blank">' + '<img src="' + imageURL + '"></a> ' + '<p>' + text + '</p>' + '<a href="' + arcURL + '" target="_blank" class="btn btn-success my-2 my-sm-0">Learn More</a>' + '</div></div>';
 				}
@@ -2210,7 +2223,7 @@ var jQ = $.noConflict(true);
 			if (framelonghtml.length > 0) {
 				jQ(".wlp-bighorn-header").after("<div class='alertBar'><div class='alertBar-inner'></div></div>");
 			}
-			//alertHtml = jQ(".alertframeLong table").find("td").eq(1).html(); 
+			//alertHtml = jQ(".alertframeLong table").find("td").eq(1).html();
 			alertHtml = jQ(".alertframeLong table").html();
 			if (alertHtml != null && typeof alertHtml !== "undefined") {
 				if (alertHtml.indexOf("check.png") !== -1) {
