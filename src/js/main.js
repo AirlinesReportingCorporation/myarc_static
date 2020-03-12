@@ -2997,8 +2997,8 @@ var jQ = $.noConflict(true);
 
 	console.log("=== JSON: " + marketingContentUrl + " ===");
  
-	console.log(msieversion());
- 
+	console.log("Browser Version: " + msieversion());
+  
 	//search edits
 	jQ("#search form").attr("action", "https://www2.arccorp.com/search");
 	jQ("#searchInput").append('<div class="searchIcon"></div>');
