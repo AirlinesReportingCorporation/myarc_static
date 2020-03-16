@@ -5314,12 +5314,12 @@ var jQ = $.noConflict(true);
   console.log("=== Hostname: " + host + " ===");
 
   if (host.indexOf("intg") > -1 || host.indexOf("stge") > -1) {
-    console.log("=== INTG or STGE environment detected ==="); //marketingContentUrl = 'https://arcintgepi.arccorp.com/myarccomp/updated/data.json?' + Date.now();
+    console.log("=== INTG or STGE environment detected ==="); //marketingContentUrl = 'https://arcintgepi.arccorp.com/myarccomp/updated/data.json?' + Date.now(); 
 
-    marketingContentUrl = 'https://www2.arccorp.com/globalassets/myarc/data.json?' + Date.now();
+    marketingContentUrl = 'https://arcuatepi.arccorp.com/globalassets/myarc/data.json?' + Date.now();
   } else if (host.indexOf("uat") > -1) {
     console.log("=== UAT environement dectected ===");
-    marketingContentUrl = 'https://www2.arccorp.com/globalassets/myarc/data.json?' + Date.now();
+    marketingContentUrl = 'https://arcuatepi.arccorp.com/globalassets/myarc/data.json?' + Date.now();
   }
 
   console.log("=== JSON: " + marketingContentUrl + " ===");

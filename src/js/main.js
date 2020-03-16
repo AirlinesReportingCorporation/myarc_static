@@ -2980,7 +2980,7 @@ var jQ = $.noConflict(true);
 		}
 	}
  
-	jQ.ajaxSetup({ cache: false }); 
+	jQ.ajaxSetup({ cache: false });   
   
 	var marketingContentUrl = 'https://www2.arccorp.com/globalassets/myarc/data.json?';
 	var host = window.location.hostname;
@@ -2988,11 +2988,11 @@ var jQ = $.noConflict(true);
 
 	if (host.indexOf("intg") > -1 || host.indexOf("stge") > -1) {
 		console.log("=== INTG or STGE environment detected ===");
-		//marketingContentUrl = 'https://arcintgepi.arccorp.com/myarccomp/updated/data.json?' + Date.now();
-		marketingContentUrl = 'https://www2.arccorp.com/globalassets/myarc/data.json?' + Date.now();
+		//marketingContentUrl = 'https://arcintgepi.arccorp.com/myarccomp/updated/data.json?' + Date.now(); 
+		marketingContentUrl = 'https://arcuatepi.arccorp.com/globalassets/myarc/data.json?' + Date.now();
 	} else if (host.indexOf("uat") > -1) {
 		console.log("=== UAT environement dectected ===");
-		marketingContentUrl = 'https://www2.arccorp.com/globalassets/myarc/data.json?' + Date.now();
+		marketingContentUrl = 'https://arcuatepi.arccorp.com/globalassets/myarc/data.json?' + Date.now();
 	}
 
 	console.log("=== JSON: " + marketingContentUrl + " ===");
